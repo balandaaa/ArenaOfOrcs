@@ -1,0 +1,17 @@
+1.feladat
+Feladatnak egy 2D-s játékot választottunk windows alapú rendszerekre. A szoftvert Unity segítségével írjuk meg C# nyelvben.
+A játék tartalmazni fog különböző szereplő karaktereket és egy irányítható karaktert. Az irányítható karakter segítségével feladatokat kell végrehajtanunk, pontokat kell gyűjtenünk.
+2.feladat
+ A játék tud elindulni, tudjuk használni, menet közben kilépni a játék menetből és lehetőségünk van a játkot az elejéről kezdeni. 
+Elvárjuk, hogy legyen egy formális rendezett kinézete, plattformja. Legyen játszható és élvezhető több korosztály számára is több nehézségi fokozatban is akár.
+3.feladat
+milyen macska?
+
+4.feladat
+A játékszoftver tartalmazni fog egy pályát. A játék, a pályán különböző szintek meglépése után, egyre nehezedő feladatok elé állít minket.
+A játék kezdetekor 3 nehézségi szintből választhatunk majd és a nehézzségi szinthez beállított érték a választott szinten belül pályánként fog lineárisan nehezedni.
+5.feladat
+A játék rendelkezni fog menürendszerrel, a menürendszer tartalmazni fogja az Indítás Beállítás Kilépés... (stb) funkciókat emellett nehézéségi szintet is itt tudjuk majd beállítani.
+A Beállítás funckicót választva a játék közbe futó zene hangerejét tudjuk állítani vagy teljesen elnémítani.
+
+6. Ehhez én nem értek :DD

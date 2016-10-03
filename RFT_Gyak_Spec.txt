@@ -1,4 +1,4 @@
-1.feladat
+﻿1.feladat
 Feladatnak egy 2D-s játékot választottunk windows alapú rendszerekre. A szoftvert Unity segítségével írjuk meg C# nyelvben.
 A játék tartalmazni fog különböző szereplő karaktereket és egy irányítható karaktert. Az irányítható karakter segítségével feladatokat kell végrehajtanunk, pontokat kell gyűjtenünk.
 2.feladat
@@ -15,3 +15,4 @@ A játék rendelkezni fog menürendszerrel, a menürendszer tartalmazni fogja az
 A Beállítás funckicót választva a játék közbe futó zene hangerejét tudjuk állítani vagy teljesen elnémítani.
 
 6. Ehhez én nem értek :DD
+7.

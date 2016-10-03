@@ -1,7 +1,9 @@
-git for windows
-Tortoise git
+Letölteni telepíteni:
+	git for windows
+	Tortoise git
 
 1. A kivánt könyvtárban jobb klick Clone
 2. Fájlunk létrehozása
 3. Jobb egér TortoiseGit->Add
 4. Commit
+5. Push

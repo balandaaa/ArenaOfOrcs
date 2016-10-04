@@ -9,12 +9,16 @@ public class MoveController : MonoBehaviour
     public float speed = 5;
     public bool lookRight = true;
     private Animator animator;
-    private Rigidbody rb;
+    
+    GameObject orc;
+    bool jump;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        
         targetPosition = transform.position;
         animator = GetComponent<Animator>();
+        orc = GameObject.Find("orc");
+        jump = false;
     }
 
 
@@ -23,25 +27,34 @@ public class MoveController : MonoBehaviour
         /*   float moveHorizontal = Input.GetAxis("Horizontal");
            Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
            rb.AddForce(movement);*/
-        
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                targetPosition -= new Vector3(0.25f, 0, 0);
 
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                targetPosition += new Vector3(0.25f, 0, 0);
+        if (Input.GetKey(KeyCode.LeftArrow) && targetPosition.x > -15)
+        {
+            targetPosition -= new Vector3(0.25f * speed, 0, 0);
 
-            }
-            if (Input.GetKey(KeyCode.Space))
-            {
-                if (Random.Range(0f, 1.0f) > 0.5f)
-                    animator.SetTrigger("attack");
-                else
-                    animator.SetTrigger("special");
-            }
-        
+        }
+        if (Input.GetKey(KeyCode.RightArrow) && targetPosition.x < 15)
+        {
+            targetPosition += new Vector3(0.25f * speed, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (Random.Range(0f, 1.0f) > 0.5f)
+                animator.SetTrigger("attack");
+            else
+                animator.SetTrigger("special");
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            targetPosition = new Vector3(targetPosition.x, targetPosition.y + 0.5f, 0);
+            
+        }
+       
+       
+         
+
+       
+
         if (targetPosition.x > transform.position.x && !lookRight)
             Flip();
         if (targetPosition.x < transform.position.x && lookRight)

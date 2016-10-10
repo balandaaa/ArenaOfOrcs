@@ -22,7 +22,7 @@ A játék kezdetekor 3 nehézségi szintbõl választhatunk majd és a nehézzs�
 		-Kilépés
 	-Beállítások tartalma
 		-Nehézségi szint választás
-		-Játék közben futó zene hangerő á
+		-Játék közben futó zene hangerő állítás
 		-Bellítás
 		-Irányítás
 6.Megvalósítás menete

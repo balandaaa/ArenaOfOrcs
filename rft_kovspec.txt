@@ -1,25 +1,31 @@
-1.Project munka leírása
-Feladatnak egy 2D-s játékot választottunk windows alapú rendszerekre. A szoftvert Unity segítségével írjuk meg C# nyelvben.
-A játék tartalmazni fog különbözõ szereplõ karaktereket és egy irányítható karaktert. Az irányítható karakter segítségével feladatokat kell végrehajtanunk, pontokat kell gyûjtenünk.
+1.Project munka leÃ­rÃ¡sa
+Feladatnak egy 2D-s jÃ¡tÃ©kot vÃ¡lasztottunk windows alapÃº rendszerekre. A szoftvert Unity segÃ­tsÃ©gÃ©vel Ã­rjuk meg C# nyelvben.
+A jÃ¡tÃ©k tartalmazni fog kÃ¼lÃ¶nbÃ¶zÃµ szereplÃµ karaktereket Ã©s egy irÃ¡nyÃ­thatÃ³ karaktert. Az irÃ¡nyÃ­thatÃ³ karakter segÃ­tsÃ©gÃ©vel feladatokat kell vÃ©grehajtanunk, pontokat kell gyÃ»jtenÃ¼nk.
 
-2.Elvárások a szoftverrel és magunkal szemben
- A játék tud elindulni, tudjuk használni, menet közben kilépni a játék menetbõl és lehetõségünk van a játkot az elejérõl kezdeni. 
-Elvárjuk, hogy legyen egy formális rendezett kinézete, plattformja. Legyen játszható és élvezhetõ több korosztály számára is több nehézségi fokozatban is akár.
+2.ElvÃ¡rÃ¡sok a szoftverrel Ã©s magunkal szemben
+ A jÃ¡tÃ©k tud elindulni, tudjuk hasznÃ¡lni, menet kÃ¶zben kilÃ©pni a jÃ¡tÃ©k menetbÃµl Ã©s lehetÃµsÃ©gÃ¼nk van a jÃ¡tkot az elejÃ©rÃµl kezdeni. 
+ElvÃ¡rjuk, hogy legyen egy formÃ¡lis rendezett kinÃ©zete, plattformja. Legyen jÃ¡tszhatÃ³ Ã©s Ã©lvezhetÃµ tÃ¶bb korosztÃ¡ly szÃ¡mÃ¡ra is tÃ¶bb nehÃ©zsÃ©gi fokozatban is akÃ¡r.
 
-3.A szoftver leírása
-A játék alapvetõen ügyességi játék lesz, melyben egy karakterrel kell teljesíteni a megadott feladatokat. A játék elve: van egy kis 1-1,5 képernyõs pálya és ott jönnek oldalról vagy fentrõl az ellenségek és azokat kell megölnöd. 
-Lehet olyan pálya ahol meg kell ölnöd mondjuk 10-20 ellent és akkor következik a következõ pálya vagy elkell érned bizonyos pontot ehez.
-Az ellenségek lehetnek akár egy hitesek vagy több hitesek is.
+3.A szoftver leÃ­rÃ¡sa
+A jÃ¡tÃ©k alapvetÃµen Ã¼gyessÃ©gi jÃ¡tÃ©k lesz, melyben egy karakterrel kell teljesÃ­teni a megadott feladatokat. A jÃ¡tÃ©k elve: van egy kis 1-1,5 kÃ©pernyÃµs pÃ¡lya Ã©s ott jÃ¶nnek oldalrÃ³l vagy fentrÃµl az ellensÃ©gek Ã©s azokat kell megÃ¶lnÃ¶d. 
+Lehet olyan pÃ¡lya ahol meg kell Ã¶lnÃ¶d mondjuk 10-20 ellent Ã©s akkor kÃ¶vetkezik a kÃ¶vetkezÃµ pÃ¡lya vagy elkell Ã©rned bizonyos pontot ehez.
+Az ellensÃ©gek lehetnek akÃ¡r egy hitesek vagy tÃ¶bb hitesek is.
 
-4.Pályák elve
-A játékszoftver tartalmazni fog egy pályát. A játék, a pályán különbözõ szintek meglépése után, egyre nehezedõ feladatok elé állít minket.
-A játék kezdetekor 3 nehézségi szintbõl választhatunk majd és a nehézzségi szinthez beállított érték a választott szinten belül pályánként fog lineárisan nehezedni.
+4.PÃ¡lyÃ¡k elve
+A jÃ¡tÃ©kszoftver tartalmazni fog egy pÃ¡lyÃ¡t. A jÃ¡tÃ©k, a pÃ¡lyÃ¡n kÃ¼lÃ¶nbÃ¶zÃµ szintek meglÃ©pÃ©se utÃ¡n, egyre nehezedÃµ feladatok elÃ© Ã¡llÃ­t minket.
+A jÃ¡tÃ©k kezdetekor 3 nehÃ©zsÃ©gi szintbÃµl vÃ¡laszthatunk majd Ã©s a nehÃ©zzsÃ©gi szinthez beÃ¡llÃ­tott Ã©rtÃ©k a vÃ¡lasztott szinten belÃ¼l pÃ¡lyÃ¡nkÃ©nt fog lineÃ¡risan nehezedni.
 
-5.Menürendszer
-A játék rendelkezni fog menürendszerrel, a menürendszer tartalmazni fogja az Indítás Beállítás Kilépés... (stb) funkciókat emellett nehézéségi szintet is itt tudjuk majd beállítani.
-A Beállítás funckicót választva a játék közbe futó zene hangerejét tudjuk állítani vagy teljesen elnémítani.
-
-6.Megvalósítás menete
--mivel kezdjük
--hogy lenne érdemes elkezdi a programozást
--pályál felépítéseinek, kinézetének a leírása is mehet ide szerintem
+5.MenÃ¼rendszer
+	-FÅ‘ menÃ¼pontok
+		-IndÃ­tÃ¡s
+		-BeÃ¡llÃ­tÃ¡s
+		-KilÃ©pÃ©s
+	-BeÃ¡llÃ­tÃ¡sok tartalma
+		-NehÃ©zsÃ©gi szint vÃ¡lasztÃ¡s
+		-JÃ¡tÃ©k kÃ¶zben futÃ³ zene hangerÅ‘ Ã¡
+		-BellÃ­tÃ¡s
+		-IrÃ¡nyÃ­tÃ¡s
+6.MegvalÃ³sÃ­tÃ¡s menete
+	-KÃ¶vetelmÃ©ny elkÃ©sztÃ©si hatÃ¡ridÅ‘: xxxx.xx.xx
+	-DemÃ³ kiprÃ³bÃ¡lÃ¡s hatÃ¡ridÅ‘: xxxx.xx.xx
+	-KÃ©sz program: xxxx.xx.xx

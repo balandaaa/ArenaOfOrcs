@@ -5,37 +5,40 @@ public class MoveController : MonoBehaviour
 {
 
     public LayerMask ground;
-    private Vector3 targetPosition;
+    public Transform GroundCheck;
+    private Vector2 targetPosition;
     public float speed = 5;
     public bool lookRight = true;
     private Animator animator;
-    
-    GameObject orc;
-    bool jump;
+    public bool isGrounded = false;
+    public bool jump = false;
+    private Rigidbody2D rb2d;
+    public float jumpForce = 1000f;
     void Start()
     {
-        
+
         targetPosition = transform.position;
         animator = GetComponent<Animator>();
-        orc = GameObject.Find("orc");
-        jump = false;
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
 
     void Update()
     {
+        // isGrounded = Physics2D.OverlapCircle(GroundCheck.position, 0.15f, ground);
+        isGrounded = Physics2D.Linecast(transform.position, GroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         /*   float moveHorizontal = Input.GetAxis("Horizontal");
            Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
            rb.AddForce(movement);*/
 
         if (Input.GetKey(KeyCode.LeftArrow) && targetPosition.x > -15)
         {
-            targetPosition -= new Vector3(0.25f * speed, 0, 0);
+            targetPosition -= new Vector2(0.25f * Time.deltaTime * speed, 0);
 
         }
         if (Input.GetKey(KeyCode.RightArrow) && targetPosition.x < 15)
         {
-            targetPosition += new Vector3(0.25f * speed, 0, 0);
+            targetPosition += new Vector2(0.25f * Time.deltaTime * speed, 0);
         }
         if (Input.GetKey(KeyCode.Space))
         {
@@ -44,16 +47,16 @@ public class MoveController : MonoBehaviour
             else
                 animator.SetTrigger("special");
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
         {
-            targetPosition = new Vector3(targetPosition.x, targetPosition.y + 0.5f, 0);
-            
+            jump = true;
+            //isGrounded = false;
         }
-       
-       
-         
 
-       
+
+
+
+
 
         if (targetPosition.x > transform.position.x && !lookRight)
             Flip();
@@ -69,7 +72,15 @@ public class MoveController : MonoBehaviour
 
         animator.SetFloat("speed", (transform.position - p).magnitude / Time.deltaTime);
     }
-
+    void FixedUpdate()
+    {
+        if (jump && transform.position.y < -2.0f)
+        {
+            transform.position = new Vector2(transform.position.x, transform.position.y + jumpForce);
+            // rb2d.AddForce(new Vector2(0f, jumpForce),ForceMode2D.Impulse);
+            jump = false;
+        }
+    }
     public void Flip()
     {
         var s = transform.localScale;

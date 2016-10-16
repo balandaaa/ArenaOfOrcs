@@ -11,27 +11,32 @@ public class MoveController : MonoBehaviour
     public bool lookRight = true;
     private Animator animator;
     public bool isGrounded = false;
+    public bool isWall = false;
     public bool jump = false;
-    private Rigidbody2D rb2d;
+    GameObject wall;
+    public Transform WallCheck;
     public float jumpForce = 1000f;
     void Start()
     {
 
         targetPosition = transform.position;
         animator = GetComponent<Animator>();
-        rb2d = GetComponent<Rigidbody2D>();
+        wall = GameObject.Find("Cube");
+
     }
 
 
     void Update()
     {
+        transform.Rotate(0, 0, 0);
         // isGrounded = Physics2D.OverlapCircle(GroundCheck.position, 0.15f, ground);
         isGrounded = Physics2D.Linecast(transform.position, GroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        isWall = Physics2D.Linecast(transform.position, WallCheck.position, 1 << LayerMask.NameToLayer("Wall"));
         /*   float moveHorizontal = Input.GetAxis("Horizontal");
            Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
            rb.AddForce(movement);*/
 
-        if (Input.GetKey(KeyCode.LeftArrow) && targetPosition.x > -15)
+        if (Input.GetKey(KeyCode.LeftArrow) && isWall && targetPosition.x > -15)
         {
             targetPosition -= new Vector2(0.25f * Time.deltaTime * speed, 0);
 
@@ -74,11 +79,12 @@ public class MoveController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (jump && transform.position.y < -2.0f)
+        if (jump && transform.position.y <= 0.0f)
         {
+            jump = false;
             transform.position = new Vector2(transform.position.x, transform.position.y + jumpForce);
             // rb2d.AddForce(new Vector2(0f, jumpForce),ForceMode2D.Impulse);
-            jump = false;
+
         }
     }
     public void Flip()

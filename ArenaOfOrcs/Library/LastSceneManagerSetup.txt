@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Orc Warrior/Scenes/warrior.unity
+- path: Assets/Scenes/warrior.unity
   isLoaded: 1
   isActive: 1

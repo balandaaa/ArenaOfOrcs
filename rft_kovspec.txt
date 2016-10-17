@@ -1,4 +1,4 @@
-1.Project munka leírása
+﻿1.Project munka leírása
 Feladatnak egy 2D-s játékot választottunk windows alapú rendszerekre. A szoftvert Unity segítségével írjuk meg C# nyelvben.
 A játék tartalmazni fog különbözõ szereplõ karaktereket és egy irányítható karaktert. Az irányítható karakter segítségével feladatokat kell végrehajtanunk, pontokat kell gyûjtenünk.
 
@@ -26,6 +26,43 @@ A játék kezdetekor 3 nehézségi szintbõl választhatunk majd és a nehézzs�
 		-Bellítás
 		-Irányítás
 6.Megvalósítás menete
-	-Követelmény elkésztési határidő: xxxx.xx.xx
-	-Demó kipróbálás határidő: xxxx.xx.xx
-	-Kész program: xxxx.xx.xx
+	-Követelmény elkésztési határidő: 2016.10.31.
+	-Demó kipróbálás határidő: 2016.10.31.
+	-Kész program: 2016.12.12.
+
+7.Szoftvertermék megfelelőségének tanúsítása nemzetközi szabványok szerint
+
+ Az értékeléshez szükséges minőségmodellek és mérőszámok a konkrét szoftver, a tanúsítói elvárások és a következő szabványok alapján választhatók ki:
+
+   - ISO/IEC 25000:2014 Systems and software Engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - Guide to SquaRE
+
+	(Szoftverfejlesztés. Szoftvertermék minőségi követelményei és értékelése (SQuaRE). Útmutató a SquaRE-hez)
+
+   - ISO/IEC 25001:2014 Systems and software engineering - System and software Quality Requirements and Evaluation (SQuaRE) - Planning and management
+
+	(Szoftverfejlesztés. Szoftvertermék minőségi követelményei és értékelése (SQuaRE). Tervezés és kezelés)
+
+   - ISO/IEC 25010:2011 Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - System and software quality models
+	
+	(Rendszer- és szoftverfejlesztés. Rendszerek és szoftver minőségi követelményei és értékelése (SQuaRE).  Rendszer-  és szoftverminőség-modellek)
+
+   - ISO/IEC TR 9126-2…4 sorozat Software engineering – Product quality
+
+	(Szoftverfejlesztés. Termékminőség)
+
+A szoftvertermékek értékelési eljárása a következő szabványoknak felel meg:
+
+   - ISO/IEC 25040:2011 Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - Evaluation process
+
+	(Rendszer- és szoftverfejlesztés. Rendszerek és szoftver minőségi követelményei és értékelése (SQuaRE). Értékelési folyamat)
+
+   - ISO/IEC 25041:2012 Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - Evaluation guide for developers, acquirers and independent evaluators
+
+	(Rendszer- és szoftverfejlesztés. Rendszerek és szoftver minőségi követelményei és értékelése (SQuaRE). Értékelési útmutató fejlesztőknek, beszerzőknek és független értékelőknek)
+
+Az adott szoftvertermék értékeléséhez szükséges minimális értékelési követelmények:
+
+   - az adott szoftvertermék (futó) programkódja;
+   - az adott szoftvertermék fejlesztői dokumentációja (pl. rendszerterv, programspecifikációk);
+   - a megrendelő által meghatározott megfelelési követelmények és integritási szintek;
+   - szoftvergyártó, mint megrendelő esetén dokumentáltan szabályozott, működő hibajavítási és verziókiadási folyamat.

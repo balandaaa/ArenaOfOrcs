@@ -1,0 +1,34 @@
+ Programspecifikáció tartalma:
+
+1)Programrendszer célja
+      - Rendszercélok
+      - Hardver-, szoftverkörnyezet (üzemmód, mûködési feltételek)
+      - User Interface tervek
+      - A programrendszer funkciói és struktúrája (rendszerdiagram, menüszerkezet)
+      - Tervezési feltételek, korlátozó tényezõk
+2)Hivatkozott dokumentumok
+      - Meglévõ szoftver dokumentáció
+      - Rendszerleírás
+3)Tervezési specifikáció
+      - Adatleírás (adatstruktúra és adatfolyamok)
+      - Származtatott programstruktúra
+      - Struktúrán belüli interfészek
+4)Modulonkénti részletes specifikáció
+      - A feldolgozás menete
+      - Mûködési algoritmus (verbális leírás, pszeudokód, diagram)
+      - Interfészek (kézi és gépi inputok, eredmények, dialógusok)
+      - Alkalmazandó tervezési technikák, a kódolás módja
+      - Adatok köre és a szervezés módja
+5)Fájlstruktúrák és globális adatok specifikációja
+      - Külsõ fájlstruktúra (logikai szerkezet, rekordleírás, elérési mód)
+      - Globális adatok jegyzéke
+      - Fájl/adat keresztreferenciák
+6)Folyamat/modul keresztreferencia táblázat
+7)Tesztelési elõírások, tesztelési dokumentáció
+      - Tesztelési utasítás, tesztadatok
+      - Integrációs tesztstratégia specifikálása
+      - Speciális elõírások
+8)Programegységek (csomagok) létrehozásának módja
+      - Speciális átlapolási elõírások
+      - Átalakítási feltételek
+

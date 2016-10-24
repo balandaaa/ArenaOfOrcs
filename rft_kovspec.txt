@@ -1,6 +1,32 @@
 ﻿1.Project munka leírása
-Feladatnak egy 2D-s játékot választottunk windows alapú rendszerekre. A szoftvert Unity segítségével írjuk meg C# nyelvben.
-A játék tartalmazni fog különbözõ szereplõ karaktereket és egy irányítható karaktert. Az irányítható karakter segítségével feladatokat kell végrehajtanunk, pontokat kell gyûjtenünk.
+
+Fő feladatunk:
+	-2D-s alapú játék készítése.
+	-Windows alapú rendszereken fusson a játék.
+	-Unity program segítségével írjuk meg a játékot.
+	-C# programozási nyelvben történik a programozása.
+	
+	-Tartalmazzon egy darab játékos karaktert.
+		-A játékos karakter irányítható legyen előre, hátra és képes legyen ugrani.
+		-A karakter tudjon támadni, ezzel sebezni az ellenséget.
+		
+	-Tartalmazzon több darab ellenséget.
+		-Az ellenség alapból passzív, ne végezzen tevékenységet.
+		-Az ellenséget megközelítve az ellenség képes megtámadni a karakterünket.
+		-Az ellenség elegendő sikeres támadás után képes megölni a karakterünket.
+		-Az ellenség egy játékkörön belül nem képes respawnolni.
+		
+	-A játék egy darab pályán játszódjon.
+		-A pályát ne lehessen elhagyni a karakterünkkel.
+		-A pálya elvégezhető/teljesíthető legyen.
+		-A pályán hátom darab nehézségi szint is elérhető legyen.
+		-A pályán legyenek úgynevezett "vak" részek, "szakadékok", amelyekre lépve a karakterünk meghal és a játék véget ér.
+	
+	-A pályán az ellenségek megölésésével pontokat tudjunk szerezni. Ha érjük az elegendő, megadott pontok számát akkor a játék 		 véget ér sikerrel.
+	
+	-A játék sikeres teljesítése után, gratuláló üzenetet kapunk az adott pálya adott nehézségi szint teljesítéséről.
+	-A játék sikertelen teljesítése után, üzenetet kapunk a pálya nem teljesítéséről. Majd felajánl újrakezdést.
+		
 
 2.Elvárások a szoftverrel és magunkal szemben
  A játék tud elindulni, tudjuk használni, menet közben kilépni a játék menetbõl és lehetõségünk van a játkot az elejérõl kezdeni. 

@@ -22,7 +22,7 @@ Fő feladatunk:
 		-A pályán hátom darab nehézségi szint is elérhető legyen.
 		-A pályán legyenek úgynevezett "vak" részek, "szakadékok", amelyekre lépve a karakterünk meghal és a játék véget ér.
 	
-	-A pályán az ellenségek megölésésével pontokat tudjunk szerezni. Ha érjük az elegendő, megadott pontok számát akkor a játék 		 véget ér sikerrel.
+	-A pályán az ellenségek megölésésével pontokat tudjunk szerezni. Ha elérjük az elegendő, megadott pontok számát akkor a játék             véget ér sikerrel.
 	
 	-A játék sikeres teljesítése után, gratuláló üzenetet kapunk az adott pálya adott nehézségi szint teljesítéséről.
 	-A játék sikertelen teljesítése után, üzenetet kapunk a pálya nem teljesítéséről. Majd felajánl újrakezdést.

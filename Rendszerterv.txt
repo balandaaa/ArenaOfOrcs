@@ -3,25 +3,25 @@
       - Rendszercélok
 
 	A célszoftver a megrendelő igényeinek megfelelő szoftver. A követelmények a rendszer specifikációban foglaltak, 
-	így az irányadó követelményi feladatok e dokumentum alapján lesz figyelembe véve. A célcsoport fenntartja a jogot,
-	hogy a későbbiekben a megrendelővel tárgyaljon a szoftver követelmény- illetve megvalósítás, esetleges felmerülő
-	problémák esetén. 
+	  így az irányadó követelményi feladatok e dokumentum alapján lesz figyelembe véve. A célcsoport fenntartja a jogot,
+	  hogy a későbbiekben a megrendelővel tárgyaljon a szoftver követelmény- illetve megvalósítás, esetleges felmerülő
+	  problémák esetén. 
 	
 
 	A megvalósíthatósági elemzés alapján, a kapott adatok szerint a szoftverfejlesztés kockázati szintjét növeli, hogy
-	a célcsoport tagjai főállásban mással is foglalkoznak, így számba kell venni a környezeti, társadalmi valamint
-	gazdasági hatásokat is. Ennek ismeretében a célcsoport fent tartja a jogot, az esetleges határidő eltolásával.	
+	  a célcsoport tagjai főállásban mással is foglalkoznak, így számba kell venni a környezeti, társadalmi valamint
+	  gazdasági hatásokat is. Ennek ismeretében a célcsoport fent tartja a jogot, az esetleges határidő eltolásával.	
 
       - Hardver-, szoftverkörnyezet (üzemmód, működési feltételek)
 
 	A célszoftver követelménye, hogy fusson minden Windows alapú rendszeren. Mivel projektmenedzsment részlege a 
-	cégnek nincs, így nem tudjuk a minimális hardver szükségletet meghatározni. Ennek megfelelően, a működési
-	feltétel, hogy a célcsoport által biztosított számítógépeken a program hibátlanul fusson és működjön. 
+	  cégnek nincs, így nem tudjuk a minimális hardver szükségletet meghatározni. Ennek megfelelően, a működési
+	  feltétel, hogy a célcsoport által biztosított számítógépeken a program hibátlanul fusson és működjön. 
 
       - User Interface tervek
 
 	A célszoftver felhasználói felülete grafikus rendszerű, tehát szöveges és rajzos elemek együttese jelenik meg
-	a képernyőn. 
+	  a képernyőn. 
 	A felhasználó felület kialakításának szempontjai:
 		-Ergonómia: az ember számára a legkisebb erőkifejtést igénylő felület kialakítása a
 			cél.
@@ -59,21 +59,25 @@
 		-Egyéb: célcsoport sajátosságai, pl. kor vagy kulturális különbségek.
 		
 
-      - A programrendszer funkciói és struktúrája (rendszerdiagram, menüszerkezet)
-      - Tervezési feltételek, korlátozó tényezők
+      - A programrendszer funkciói és struktúrája (rendszerdiagram, menüszerkezet).
+      - Tervezési feltételek, korlátozó tényezők.
+      
 2)Hivatkozott dokumentumok
-      - Meglévő szoftver dokumentáció
-      - Rendszerleírás
+      - Meglévő szoftver dokumentáció.
+      - Rendszerleírás.
+      
 3)Tervezési specifikáció
-      - Adatleírás (adatstruktúra és adatfolyamok)
-      - Származtatott programstruktúra
-      - Struktúrán belüli interfészek
+      - Adatleírás (adatstruktúra és adatfolyamok).
+      - Származtatott programstruktúra.
+      - Struktúrán belüli interfészek.
+      
 4)Modulonkénti részletes specifikáció
-      - A feldolgozás menete
-      - Működési algoritmus (verbális leírás, pszeudokód, diagram)
-      - Interfészek (kézi és gépi inputok, eredmények, dialógusok)
-      - Alkalmazandó tervezési technikák, a kódolás módja
-      - Adatok köre és a szervezés módja
+      - A feldolgozás menete.
+      - Működési algoritmus (verbális leírás, pszeudokód, diagram).
+      - Interfészek (kézi és gépi inputok, eredmények, dialógusok).
+      - Alkalmazandó tervezési technikák, a kódolás módja.
+      - Adatok köre és a szervezés módja.
+      
 5)Fájlstruktúrák és globális adatok specifikációja
       - Külső fájlstruktúra (logikai szerkezet, rekordleírás, elérési mód)
       - Globális adatok jegyzéke
@@ -87,21 +91,21 @@
 	  A táblázat tartalma az első fordítás után generálódik és minden fordítás után frissül.
 	
 	Address: A változó címe
-	- Symbol: A változó neve, amennyiben a címhez tartozik szimbolikus név
-	- POU: a programegység, ahol a változóra hivatkozás történik
-	- Position: a hivatkozás helye a POU-n belül
-	- Read/Write: hozzáférés módja, vagyis az adott helyen a változót írja vagy olvassa-e a
+	 - Symbol: A változó neve, amennyiben a címhez tartozik szimbolikus név
+	 - POU: a programegység, ahol a változóra hivatkozás történik
+	 - Position: a hivatkozás helye a POU-n belül
+	 - Read/Write: hozzáférés módja, vagyis az adott helyen a változót írja vagy olvassa-e a
 	  program.
 	  
 	A változó állapot táblázat segítségével nyomon követhetők a projektben használt változók aktuális
 	  állapotai, valamint megadhatók a kényszerített (Force) értékek is, miután letöltöttük a projektet a
-	  PLC-re
+	  PLC-re.
 
 7)Tesztelési előírások, tesztelési dokumentáció
       - Tesztelési utasítás, tesztadatok
 
 		A tesztelés kontrolált körülmények között zajlik, gyakorlatilag a rendszer ellenőrzött
-		futtatása, és az eredményül kapott adatok kiértékelése. 
+		  futtatása, és az eredményül kapott adatok kiértékelése. 
 	
 		Mivel a hibáknak több szintje vagy típusa lehet:
 
@@ -181,13 +185,13 @@
       - Speciális átlapolási előírások
 	
 	A szoftverlicence Free software, tehát a nyílt forrású szoftver. (A szerző közkincsé
-	teszi a program forráskódját, engedélyezi az abban való módosítást, a
-	szoftver ingyenes, szabad felhasználását és továbbadását.)
-	A licence szerződés rögzíti a terméktámogatás módját (frissítések, javítások, esetleg új
-	verzió), időtartamát. A gyártó által vállalt jótállás és szavatosság információ is a licence
-	szerződésben található.  
+	  teszi a program forráskódját, engedélyezi az abban való módosítást, a
+	  szoftver ingyenes, szabad felhasználását és továbbadását.)
+	  A licence szerződés rögzíti a terméktámogatás módját (frissítések, javítások, esetleg új
+	  verzió), időtartamát. A gyártó által vállalt jótállás és szavatosság információ is a licence
+	  szerződésben található.  
 
       - Átalakítási feltételek
 
 	Átalakításra a kész szoftvernél a megrendelő részéről nincs lehetőség, a kész szoftver után lehet a következő
-	verzióra szerződést kötni. 
+	  verzióra szerződést kötni. 

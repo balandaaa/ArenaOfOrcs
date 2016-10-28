@@ -81,6 +81,22 @@
       
 6)Folyamat/modul keresztreferencia táblázat
 
+	Ez a táblázat mutatja az összes projektben használt változót, továbbá azt, hogy melyik POU-ban
+	  találhatók és azon belül melyik Network-ben. A Cross Reference táblázat hasznos eszköz ha
+	  szeretnénk tudni egy szimbólum nevet vagy címét, és hogy hol használjuk. 
+	  A táblázat tartalma az első fordítás után generálódik és minden fordítás után frissül.
+	
+	Address: A változó címe
+	- Symbol: A változó neve, amennyiben a címhez tartozik szimbolikus név
+	- POU: a programegység, ahol a változóra hivatkozás történik
+	- Position: a hivatkozás helye a POU-n belül
+	- Read/Write: hozzáférés módja, vagyis az adott helyen a változót írja vagy olvassa-e a
+	  program.
+	  
+	A változó állapot táblázat segítségével nyomon követhetők a projektben használt változók aktuális
+	  állapotai, valamint megadhatók a kényszerített (Force) értékek is, miután letöltöttük a projektet a
+	  PLC-re
+
 7)Tesztelési előírások, tesztelési dokumentáció
       - Tesztelési utasítás, tesztadatok
 
@@ -90,32 +106,36 @@
 		Mivel a hibáknak több szintje vagy típusa lehet:
 
 		-Bemeneti/kimeneti hibák: helytelen bemenet elfogadása, helyes bemenet el nem
-		fogadása, hibás kimenet, helyes de hiányos kimenet
-		-Számítási hiba: helytelen algoritmus
-		-Interfész hibák
-		-Logikai hibák: hiányzó esetek, redundáns esetek, hiányzó feltételek,
-		-Adathiba: helytelen formátum, inkonszisztens adat,
+		 fogadása, hibás kimenet, helyes de hiányos kimenet
+		  -Számítási hiba: helytelen algoritmus
+		  -Interfész hibák
+		  -Logikai hibák: hiányzó esetek, redundáns esetek, hiányzó feltételek,
+		  -Adathiba: helytelen formátum, inkonszisztens adat,
 
 		Így a tesztelés a következőképpen történik:
 
 		-Belövési tesztek (debuggolás): a debuggolás hibakövetést jelent. A program
-		belső működését figyeljük meg töréspontok, vagy lépésenkénti végrehajtás
-		mentén. Nem csak a hiba meglétét, hanem a helyét is megmutatja.
+		  belső működését figyeljük meg töréspontok, vagy lépésenkénti végrehajtás
+		  mentén. Nem csak a hiba meglétét, hanem a helyét is megmutatja.
+		
 		-Részegység teszt: egy rendszer vagy szoftver komponens önmagában, a
-		rendszer többi elemétől független vizsgálata.
+		  rendszer többi elemétől független vizsgálata.
+		
 		-Egységtesztek és integrációs tesztek: Mint mondtuk a részegységek önálló
-		megfelelő működése nem elegendő, az egész rendszernek is jól kell
-		működnie. A legcélravezetőbb módszer a komponensenkénti, vagyis
-		inkrementális tesztelés. Az inkremenseket egyenként fűzzük össze és minden
-		egyes hozzáfűzés után tesztelünk. 
+		  megfelelő működése nem elegendő, az egész rendszernek is jól kell
+		  működnie. A legcélravezetőbb módszer a komponensenkénti, vagyis
+		  inkrementális tesztelés. Az inkremenseket egyenként fűzzük össze és minden
+		  egyes hozzáfűzés után tesztelünk. 
+		
 		-Stresszteszt: a rendszer egészének működését teszteli. Célja a rendszer
-		teljesítményének felmérése szélsőséges körülmények között is. Két funkciója
-		van, megvédeni a rendszert a túrterhelés káros következményeitől (pl.
-		adatvesztés), és a szélsőséges körülmények között kibukhatnak olyan hibák,
-		amelyek normál körülmények között csak nagyon lassan.
+		  teljesítményének felmérése szélsőséges körülmények között is. Két funkciója
+		  van, megvédeni a rendszert a túrterhelés káros következményeitől (pl.
+		  adatvesztés), és a szélsőséges körülmények között kibukhatnak olyan hibák,
+		  amelyek normál körülmények között csak nagyon lassan.
+		
 		-Elfogadási teszt (acceptance teszt): az üzembe helyezés előtti utolsó teszt,
-		amely már valós adatokkal zajlik. Ezt alfa tesztelésnek nevezzük. Ilyenkor
-		dokumentálják, hogy a program eleget tesz-e a megrendelő elvárásainak. 
+		  amely már valós adatokkal zajlik. Ezt alfa tesztelésnek nevezzük. Ilyenkor
+		  dokumentálják, hogy a program eleget tesz-e a megrendelő elvárásainak. 
 
       - Integrációs tesztstratégia specifikálása:
       
@@ -132,10 +152,10 @@
 	   -System Level Testing (SLT):
 	 
 		 -A rendszer összes komponensének teljes körő
-		 (funkcionális, nem funkcionális) tesztelése.
+		   (funkcionális, nem funkcionális) tesztelése.
 		
 		 -Feladata annak megállapítása, hogy a rendszer
-		 kiadható-e a megrendelőnek (végső ellenőrzés).
+		   kiadható-e a megrendelőnek (végső ellenőrzés).
 		 
 		 -A fejlesztő szervezeten belül végzik.
 		

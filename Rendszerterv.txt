@@ -1,9 +1,64 @@
- Programspecifikáció tartalma:
 
 1)Programrendszer célja
       - Rendszercélok
+
+	A célszoftver a megrendelõ igényeinek megfelelõ szoftver. A követelmények a rendszer specifikációban foglaltak, 
+	így az irányadó követelményi feladatok e dokumentum alapján lesz figyelembe véve. A célcsoport fenntartja a jogot,
+	hogy a késõbbiekben a megrendelõvel tárgyaljon a szoftver követelmény- illetve megvalósítás, esetleges felmerülõ
+	problémák esetén. 
+	
+
+	A megvalósíthatósági elemzés alapján, a kapott adatok szerint a szoftverfejlesztés kockázati szintjét növeli, hogy
+	a célcsoport tagjai fõállásban mással is foglalkoznak, így számba kell venni a környezeti, társadalmi valamint
+	gazdasági hatásokat is. Ennek ismeretében a célcsoport fent tartja a jogot, az esetleges határidõ eltolásával.	
+
       - Hardver-, szoftverkörnyezet (üzemmód, mûködési feltételek)
+
+	A célszoftver követelménye, hogy fusson minden Windows alapú rendszeren. Mivel projektmenedzsment részlege a 
+	cégnek nincs, így nem tudjuk a minimális hardver szükségletet meghatározni. Ennek megfelelõen, a mûködési
+	feltétel, hogy a célcsoport által biztosított számítógépeken a program hibátlanul fusson és mûködjön. 
+
       - User Interface tervek
+
+	A célszoftver felhasználói felülete grafikus rendszerû, tehát szöveges és rajzos elemek együttese jelenik meg
+	a képernyõn. 
+	A felhasználó felület kialakításának szempontjai:
+		-Ergonómia: az ember számára a legkisebb erõkifejtést igénylõ felület kialakítása a
+			cél.
+		-Felhasználói jártasság felhasználása: a felhasználó elõzetes ismereteinek
+			felhasználása, ne akarjunk teljesen újat és egyben szokatlant alkotni.
+		-Egyértelmûség: egyszerû letisztult ábrákat, rajzokat és rövid tömör kifejezéseket
+			használjunk.
+		-Túlzsúfoltság kerülése: egyszerre ne kínáljuk fel az összes funkciót, rangsoroljuk
+			õket, rendezzük õket osztályokba.
+		-Konzisztencia: hasonló mûveletek, hasonló módon történõ jelölése.
+		-Valóság visszatükrözése: pl. az adatrögzítõ alkalmazás emlékeztessen a
+			hagyományos papír alapú nyomtatványra.
+		-Visszacsatolás : az események elõtt váljon egyértelmûvé a felhasználó számára, hogy
+			hol van lehetõség mûveletek végzésére, és hozzuk a tudomására, ha csinált valamit.
+			A hosszasabb folyamatoknál jelezzük, éppen hogyan áll, kb. mennyi idõ van még
+			hátra a feladat végrehajtásból.
+		-Hibaminimalizálás: Nagyobb jelentõségû mûveletek elõtt kérjünk megerõsítést, és
+			tegyük lehetõvé az egyes mûveletek visszavonását. A hibákról küldjünk egyértelmû
+			jelzést, lehetõleg feltüntetve a hiba okát.
+		-Olvashatóság: jóllehet a tipográfia külön szakma, de az olvashatóságot és az
+			átlátható szövegelrendezést a minimum követelménynek tekinthetjük.
+		-Színek ésszerû használata: A színek segíthetik a tájékozódást, de zavarhatják is a
+			felhasználót. A színhasználat,szubjektív ahogyan a felhasználói felület kialakítása is,
+			de van néhány alapszabály. Korlátozott számú színt használjunk. Figyeljünk a színek
+			közti harmóniára (legalább ne vibráljanak a színek egymás mellett), az
+			olvashatóságra (sötét háttéren, ne sötét betûszínt használjunk). Az egyes funkciókat
+			ne csak színekkel jelöljük, hanem valamilyen grafikai elemmel vagy szöveggel is,
+			mert sok ember színtévesztõ vagy színvak. De fordítva is igaz, hogy a szöveges
+			üzenetekhez érdemes színt adni.
+		-Egér és billentyûzet használata: a legkönnyebb és gyorsabb kezelhetõség érdekében
+			az egér mellett tegyük lehetõvé a billentyûzet használatát is.. 
+		Ablakok: érdemes a részfeladatokat elkülöníteni és külön ablakokat használni erre,
+			de mértékkel, ne alakuljon ki kaotikus láncszerkezet. A körkörös hivatkozást
+			mindenképpen ki kell küszöbölni.
+		-Egyéb: célcsoport sajátosságai, pl. kor vagy kulturális különbségek.
+		
+
       - A programrendszer funkciói és struktúrája (rendszerdiagram, menüszerkezet)
       - Tervezési feltételek, korlátozó tényezõk
 2)Hivatkozott dokumentumok
@@ -26,9 +81,56 @@
 6)Folyamat/modul keresztreferencia táblázat
 7)Tesztelési elõírások, tesztelési dokumentáció
       - Tesztelési utasítás, tesztadatok
+
+		A tesztelés kontrolált körülmények között zajlik, gyakorlatilag a rendszer ellenõrzött
+		futtatása, és az eredményül kapott adatok kiértékelése. 
+	
+		Mivel a hibáknak több szintje vagy típusa lehet:
+
+		-Bemeneti/kimeneti hibák: helytelen bemenet elfogadása, helyes bemenet el nem
+		fogadása, hibás kimenet, helyes de hiányos kimenet
+		-Számítási hiba: helytelen algoritmus
+		-Interfész hibák
+		-Logikai hibák: hiányzó esetek, redundáns esetek, hiányzó feltételek,
+		-Adathiba: helytelen formátum, inkonszisztens adat,
+
+		Így a tesztelés a következõképpen történik:
+
+		-Belövési tesztek (debuggolás): a debuggolás hibakövetést jelent. A program
+		belsõ mûködését figyeljük meg töréspontok, vagy lépésenkénti végrehajtás
+		mentén. Nem csak a hiba meglétét, hanem a helyét is megmutatja.
+		-Részegység teszt: egy rendszer vagy szoftver komponens önmagában, a
+		rendszer többi elemétõl független vizsgálata.
+		-Egységtesztek és integrációs tesztek: Mint mondtuk a részegységek önálló
+		megfelelõ mûködése nem elegendõ, az egész rendszernek is jól kell
+		mûködnie. A legcélravezetõbb módszer a komponensenkénti, vagyis
+		inkrementális tesztelés. Az inkremenseket egyenként fûzzük össze és minden
+		egyes hozzáfûzés után tesztelünk. 
+		-Stresszteszt: a rendszer egészének mûködését teszteli. Célja a rendszer
+		teljesítményének felmérése szélsõséges körülmények között is. Két funkciója
+		van, megvédeni a rendszert a túrterhelés káros következményeitõl (pl.
+		adatvesztés), és a szélsõséges körülmények között kibukhatnak olyan hibák,
+		amelyek normál körülmények között csak nagyon lassan.
+		-Elfogadási teszt (acceptance teszt): az üzembe helyezés elõtti utolsó teszt,
+		amely már valós adatokkal zajlik. Ezt alfa tesztelésnek nevezzük. Ilyenkor
+		dokumentálják, hogy a program eleget tesz-e a megrendelõ elvárásainak. 
+
       - Integrációs tesztstratégia specifikálása
       - Speciális elõírások
+
+	A tesztelést a célcsoport tagjai végzik.	
+
 8)Programegységek (csomagok) létrehozásának módja
       - Speciális átlapolási elõírások
+	
+	A szoftverlicence Free software, tehát a nyílt forrású szoftver. (A szerzõ közkincsé
+	teszi a program forráskódját, engedélyezi az abban való módosítást, a
+	szoftver ingyenes, szabad felhasználását és továbbadását.)
+	A licence szerzõdés rögzíti a terméktámogatás módját (frissítések, javítások, esetleg új
+	verzió), idõtartamát. A gyártó által vállalt jótállás és szavatosság információ is a licence
+	szerzõdésben található.  
+
       - Átalakítási feltételek
 
+	Átalakításra a kész szoftvernél a megrendelõ részérõl nincs lehetõség, a kész szoftver után lehet a következõ
+	verzióra szerzõdést kötni. 

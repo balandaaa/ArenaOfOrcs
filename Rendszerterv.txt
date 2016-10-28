@@ -1,136 +1,173 @@
 
-1)Programrendszer célja
-      - Rendszercélok
+1)Programrendszer cÃ©lja
+      - RendszercÃ©lok
 
-	A célszoftver a megrendelõ igényeinek megfelelõ szoftver. A követelmények a rendszer specifikációban foglaltak, 
-	így az irányadó követelményi feladatok e dokumentum alapján lesz figyelembe véve. A célcsoport fenntartja a jogot,
-	hogy a késõbbiekben a megrendelõvel tárgyaljon a szoftver követelmény- illetve megvalósítás, esetleges felmerülõ
-	problémák esetén. 
+	A cÃ©lszoftver a megrendelÅ‘ igÃ©nyeinek megfelelÅ‘ szoftver. A kÃ¶vetelmÃ©nyek a rendszer specifikÃ¡ciÃ³ban foglaltak, 
+	Ã­gy az irÃ¡nyadÃ³ kÃ¶vetelmÃ©nyi feladatok e dokumentum alapjÃ¡n lesz figyelembe vÃ©ve. A cÃ©lcsoport fenntartja a jogot,
+	hogy a kÃ©sÅ‘bbiekben a megrendelÅ‘vel tÃ¡rgyaljon a szoftver kÃ¶vetelmÃ©ny- illetve megvalÃ³sÃ­tÃ¡s, esetleges felmerÃ¼lÅ‘
+	problÃ©mÃ¡k esetÃ©n. 
 	
 
-	A megvalósíthatósági elemzés alapján, a kapott adatok szerint a szoftverfejlesztés kockázati szintjét növeli, hogy
-	a célcsoport tagjai fõállásban mással is foglalkoznak, így számba kell venni a környezeti, társadalmi valamint
-	gazdasági hatásokat is. Ennek ismeretében a célcsoport fent tartja a jogot, az esetleges határidõ eltolásával.	
+	A megvalÃ³sÃ­thatÃ³sÃ¡gi elemzÃ©s alapjÃ¡n, a kapott adatok szerint a szoftverfejlesztÃ©s kockÃ¡zati szintjÃ©t nÃ¶veli, hogy
+	a cÃ©lcsoport tagjai fÅ‘Ã¡llÃ¡sban mÃ¡ssal is foglalkoznak, Ã­gy szÃ¡mba kell venni a kÃ¶rnyezeti, tÃ¡rsadalmi valamint
+	gazdasÃ¡gi hatÃ¡sokat is. Ennek ismeretÃ©ben a cÃ©lcsoport fent tartja a jogot, az esetleges hatÃ¡ridÅ‘ eltolÃ¡sÃ¡val.	
 
-      - Hardver-, szoftverkörnyezet (üzemmód, mûködési feltételek)
+      - Hardver-, szoftverkÃ¶rnyezet (Ã¼zemmÃ³d, mÅ±kÃ¶dÃ©si feltÃ©telek)
 
-	A célszoftver követelménye, hogy fusson minden Windows alapú rendszeren. Mivel projektmenedzsment részlege a 
-	cégnek nincs, így nem tudjuk a minimális hardver szükségletet meghatározni. Ennek megfelelõen, a mûködési
-	feltétel, hogy a célcsoport által biztosított számítógépeken a program hibátlanul fusson és mûködjön. 
+	A cÃ©lszoftver kÃ¶vetelmÃ©nye, hogy fusson minden Windows alapÃº rendszeren. Mivel projektmenedzsment rÃ©szlege a 
+	cÃ©gnek nincs, Ã­gy nem tudjuk a minimÃ¡lis hardver szÃ¼ksÃ©gletet meghatÃ¡rozni. Ennek megfelelÅ‘en, a mÅ±kÃ¶dÃ©si
+	feltÃ©tel, hogy a cÃ©lcsoport Ã¡ltal biztosÃ­tott szÃ¡mÃ­tÃ³gÃ©peken a program hibÃ¡tlanul fusson Ã©s mÅ±kÃ¶djÃ¶n. 
 
       - User Interface tervek
 
-	A célszoftver felhasználói felülete grafikus rendszerû, tehát szöveges és rajzos elemek együttese jelenik meg
-	a képernyõn. 
-	A felhasználó felület kialakításának szempontjai:
-		-Ergonómia: az ember számára a legkisebb erõkifejtést igénylõ felület kialakítása a
-			cél.
-		-Felhasználói jártasság felhasználása: a felhasználó elõzetes ismereteinek
-			felhasználása, ne akarjunk teljesen újat és egyben szokatlant alkotni.
-		-Egyértelmûség: egyszerû letisztult ábrákat, rajzokat és rövid tömör kifejezéseket
-			használjunk.
-		-Túlzsúfoltság kerülése: egyszerre ne kínáljuk fel az összes funkciót, rangsoroljuk
-			õket, rendezzük õket osztályokba.
-		-Konzisztencia: hasonló mûveletek, hasonló módon történõ jelölése.
-		-Valóság visszatükrözése: pl. az adatrögzítõ alkalmazás emlékeztessen a
-			hagyományos papír alapú nyomtatványra.
-		-Visszacsatolás : az események elõtt váljon egyértelmûvé a felhasználó számára, hogy
-			hol van lehetõség mûveletek végzésére, és hozzuk a tudomására, ha csinált valamit.
-			A hosszasabb folyamatoknál jelezzük, éppen hogyan áll, kb. mennyi idõ van még
-			hátra a feladat végrehajtásból.
-		-Hibaminimalizálás: Nagyobb jelentõségû mûveletek elõtt kérjünk megerõsítést, és
-			tegyük lehetõvé az egyes mûveletek visszavonását. A hibákról küldjünk egyértelmû
-			jelzést, lehetõleg feltüntetve a hiba okát.
-		-Olvashatóság: jóllehet a tipográfia külön szakma, de az olvashatóságot és az
-			átlátható szövegelrendezést a minimum követelménynek tekinthetjük.
-		-Színek ésszerû használata: A színek segíthetik a tájékozódást, de zavarhatják is a
-			felhasználót. A színhasználat,szubjektív ahogyan a felhasználói felület kialakítása is,
-			de van néhány alapszabály. Korlátozott számú színt használjunk. Figyeljünk a színek
-			közti harmóniára (legalább ne vibráljanak a színek egymás mellett), az
-			olvashatóságra (sötét háttéren, ne sötét betûszínt használjunk). Az egyes funkciókat
-			ne csak színekkel jelöljük, hanem valamilyen grafikai elemmel vagy szöveggel is,
-			mert sok ember színtévesztõ vagy színvak. De fordítva is igaz, hogy a szöveges
-			üzenetekhez érdemes színt adni.
-		-Egér és billentyûzet használata: a legkönnyebb és gyorsabb kezelhetõség érdekében
-			az egér mellett tegyük lehetõvé a billentyûzet használatát is.. 
-		Ablakok: érdemes a részfeladatokat elkülöníteni és külön ablakokat használni erre,
-			de mértékkel, ne alakuljon ki kaotikus láncszerkezet. A körkörös hivatkozást
-			mindenképpen ki kell küszöbölni.
-		-Egyéb: célcsoport sajátosságai, pl. kor vagy kulturális különbségek.
+	A cÃ©lszoftver felhasznÃ¡lÃ³i felÃ¼lete grafikus rendszerÅ±, tehÃ¡t szÃ¶veges Ã©s rajzos elemek egyÃ¼ttese jelenik meg
+	a kÃ©pernyÅ‘n. 
+	A felhasznÃ¡lÃ³ felÃ¼let kialakÃ­tÃ¡sÃ¡nak szempontjai:
+		-ErgonÃ³mia: az ember szÃ¡mÃ¡ra a legkisebb erÅ‘kifejtÃ©st igÃ©nylÅ‘ felÃ¼let kialakÃ­tÃ¡sa a
+			cÃ©l.
+		-FelhasznÃ¡lÃ³i jÃ¡rtassÃ¡g felhasznÃ¡lÃ¡sa: a felhasznÃ¡lÃ³ elÅ‘zetes ismereteinek
+			felhasznÃ¡lÃ¡sa, ne akarjunk teljesen Ãºjat Ã©s egyben szokatlant alkotni.
+		-EgyÃ©rtelmÅ±sÃ©g: egyszerÅ± letisztult Ã¡brÃ¡kat, rajzokat Ã©s rÃ¶vid tÃ¶mÃ¶r kifejezÃ©seket
+			hasznÃ¡ljunk.
+		-TÃºlzsÃºfoltsÃ¡g kerÃ¼lÃ©se: egyszerre ne kÃ­nÃ¡ljuk fel az Ã¶sszes funkciÃ³t, rangsoroljuk
+			Å‘ket, rendezzÃ¼k Å‘ket osztÃ¡lyokba.
+		-Konzisztencia: hasonlÃ³ mÅ±veletek, hasonlÃ³ mÃ³don tÃ¶rtÃ©nÅ‘ jelÃ¶lÃ©se.
+		-ValÃ³sÃ¡g visszatÃ¼krÃ¶zÃ©se: pl. az adatrÃ¶gzÃ­tÅ‘ alkalmazÃ¡s emlÃ©keztessen a
+			hagyomÃ¡nyos papÃ­r alapÃº nyomtatvÃ¡nyra.
+		-VisszacsatolÃ¡s : az esemÃ©nyek elÅ‘tt vÃ¡ljon egyÃ©rtelmÅ±vÃ© a felhasznÃ¡lÃ³ szÃ¡mÃ¡ra, hogy
+			hol van lehetÅ‘sÃ©g mÅ±veletek vÃ©gzÃ©sÃ©re, Ã©s hozzuk a tudomÃ¡sÃ¡ra, ha csinÃ¡lt valamit.
+			A hosszasabb folyamatoknÃ¡l jelezzÃ¼k, Ã©ppen hogyan Ã¡ll, kb. mennyi idÅ‘ van mÃ©g
+			hÃ¡tra a feladat vÃ©grehajtÃ¡sbÃ³l.
+		-HibaminimalizÃ¡lÃ¡s: Nagyobb jelentÅ‘sÃ©gÅ± mÅ±veletek elÅ‘tt kÃ©rjÃ¼nk megerÅ‘sÃ­tÃ©st, Ã©s
+			tegyÃ¼k lehetÅ‘vÃ© az egyes mÅ±veletek visszavonÃ¡sÃ¡t. A hibÃ¡krÃ³l kÃ¼ldjÃ¼nk egyÃ©rtelmÅ±
+			jelzÃ©st, lehetÅ‘leg feltÃ¼ntetve a hiba okÃ¡t.
+		-OlvashatÃ³sÃ¡g: jÃ³llehet a tipogrÃ¡fia kÃ¼lÃ¶n szakma, de az olvashatÃ³sÃ¡got Ã©s az
+			Ã¡tlÃ¡thatÃ³ szÃ¶vegelrendezÃ©st a minimum kÃ¶vetelmÃ©nynek tekinthetjÃ¼k.
+		-SzÃ­nek Ã©sszerÅ± hasznÃ¡lata: A szÃ­nek segÃ­thetik a tÃ¡jÃ©kozÃ³dÃ¡st, de zavarhatjÃ¡k is a
+			felhasznÃ¡lÃ³t. A szÃ­nhasznÃ¡lat,szubjektÃ­v ahogyan a felhasznÃ¡lÃ³i felÃ¼let kialakÃ­tÃ¡sa is,
+			de van nÃ©hÃ¡ny alapszabÃ¡ly. KorlÃ¡tozott szÃ¡mÃº szÃ­nt hasznÃ¡ljunk. FigyeljÃ¼nk a szÃ­nek
+			kÃ¶zti harmÃ³niÃ¡ra (legalÃ¡bb ne vibrÃ¡ljanak a szÃ­nek egymÃ¡s mellett), az
+			olvashatÃ³sÃ¡gra (sÃ¶tÃ©t hÃ¡ttÃ©ren, ne sÃ¶tÃ©t betÅ±szÃ­nt hasznÃ¡ljunk). Az egyes funkciÃ³kat
+			ne csak szÃ­nekkel jelÃ¶ljÃ¼k, hanem valamilyen grafikai elemmel vagy szÃ¶veggel is,
+			mert sok ember szÃ­ntÃ©vesztÅ‘ vagy szÃ­nvak. De fordÃ­tva is igaz, hogy a szÃ¶veges
+			Ã¼zenetekhez Ã©rdemes szÃ­nt adni.
+		-EgÃ©r Ã©s billentyÅ±zet hasznÃ¡lata: a legkÃ¶nnyebb Ã©s gyorsabb kezelhetÅ‘sÃ©g Ã©rdekÃ©ben
+			az egÃ©r mellett tegyÃ¼k lehetÅ‘vÃ© a billentyÅ±zet hasznÃ¡latÃ¡t is.. 
+		Ablakok: Ã©rdemes a rÃ©szfeladatokat elkÃ¼lÃ¶nÃ­teni Ã©s kÃ¼lÃ¶n ablakokat hasznÃ¡lni erre,
+			de mÃ©rtÃ©kkel, ne alakuljon ki kaotikus lÃ¡ncszerkezet. A kÃ¶rkÃ¶rÃ¶s hivatkozÃ¡st
+			mindenkÃ©ppen ki kell kÃ¼szÃ¶bÃ¶lni.
+		-EgyÃ©b: cÃ©lcsoport sajÃ¡tossÃ¡gai, pl. kor vagy kulturÃ¡lis kÃ¼lÃ¶nbsÃ©gek.
 		
 
-      - A programrendszer funkciói és struktúrája (rendszerdiagram, menüszerkezet)
-      - Tervezési feltételek, korlátozó tényezõk
+      - A programrendszer funkciÃ³i Ã©s struktÃºrÃ¡ja (rendszerdiagram, menÃ¼szerkezet)
+      - TervezÃ©si feltÃ©telek, korlÃ¡tozÃ³ tÃ©nyezÅ‘k
 2)Hivatkozott dokumentumok
-      - Meglévõ szoftver dokumentáció
-      - Rendszerleírás
-3)Tervezési specifikáció
-      - Adatleírás (adatstruktúra és adatfolyamok)
-      - Származtatott programstruktúra
-      - Struktúrán belüli interfészek
-4)Modulonkénti részletes specifikáció
-      - A feldolgozás menete
-      - Mûködési algoritmus (verbális leírás, pszeudokód, diagram)
-      - Interfészek (kézi és gépi inputok, eredmények, dialógusok)
-      - Alkalmazandó tervezési technikák, a kódolás módja
-      - Adatok köre és a szervezés módja
-5)Fájlstruktúrák és globális adatok specifikációja
-      - Külsõ fájlstruktúra (logikai szerkezet, rekordleírás, elérési mód)
-      - Globális adatok jegyzéke
-      - Fájl/adat keresztreferenciák
-6)Folyamat/modul keresztreferencia táblázat
-7)Tesztelési elõírások, tesztelési dokumentáció
-      - Tesztelési utasítás, tesztadatok
+      - MeglÃ©vÅ‘ szoftver dokumentÃ¡ciÃ³
+      - RendszerleÃ­rÃ¡s
+3)TervezÃ©si specifikÃ¡ciÃ³
+      - AdatleÃ­rÃ¡s (adatstruktÃºra Ã©s adatfolyamok)
+      - SzÃ¡rmaztatott programstruktÃºra
+      - StruktÃºrÃ¡n belÃ¼li interfÃ©szek
+4)ModulonkÃ©nti rÃ©szletes specifikÃ¡ciÃ³
+      - A feldolgozÃ¡s menete
+      - MÅ±kÃ¶dÃ©si algoritmus (verbÃ¡lis leÃ­rÃ¡s, pszeudokÃ³d, diagram)
+      - InterfÃ©szek (kÃ©zi Ã©s gÃ©pi inputok, eredmÃ©nyek, dialÃ³gusok)
+      - AlkalmazandÃ³ tervezÃ©si technikÃ¡k, a kÃ³dolÃ¡s mÃ³dja
+      - Adatok kÃ¶re Ã©s a szervezÃ©s mÃ³dja
+5)FÃ¡jlstruktÃºrÃ¡k Ã©s globÃ¡lis adatok specifikÃ¡ciÃ³ja
+      - KÃ¼lsÅ‘ fÃ¡jlstruktÃºra (logikai szerkezet, rekordleÃ­rÃ¡s, elÃ©rÃ©si mÃ³d)
+      - GlobÃ¡lis adatok jegyzÃ©ke
+      - FÃ¡jl/adat keresztreferenciÃ¡k
+      
+6)Folyamat/modul keresztreferencia tÃ¡blÃ¡zat
 
-		A tesztelés kontrolált körülmények között zajlik, gyakorlatilag a rendszer ellenõrzött
-		futtatása, és az eredményül kapott adatok kiértékelése. 
+7)TesztelÃ©si elÅ‘Ã­rÃ¡sok, tesztelÃ©si dokumentÃ¡ciÃ³
+      - TesztelÃ©si utasÃ­tÃ¡s, tesztadatok
+
+		A tesztelÃ©s kontrolÃ¡lt kÃ¶rÃ¼lmÃ©nyek kÃ¶zÃ¶tt zajlik, gyakorlatilag a rendszer ellenÅ‘rzÃ¶tt
+		futtatÃ¡sa, Ã©s az eredmÃ©nyÃ¼l kapott adatok kiÃ©rtÃ©kelÃ©se. 
 	
-		Mivel a hibáknak több szintje vagy típusa lehet:
+		Mivel a hibÃ¡knak tÃ¶bb szintje vagy tÃ­pusa lehet:
 
-		-Bemeneti/kimeneti hibák: helytelen bemenet elfogadása, helyes bemenet el nem
-		fogadása, hibás kimenet, helyes de hiányos kimenet
-		-Számítási hiba: helytelen algoritmus
-		-Interfész hibák
-		-Logikai hibák: hiányzó esetek, redundáns esetek, hiányzó feltételek,
-		-Adathiba: helytelen formátum, inkonszisztens adat,
+		-Bemeneti/kimeneti hibÃ¡k: helytelen bemenet elfogadÃ¡sa, helyes bemenet el nem
+		fogadÃ¡sa, hibÃ¡s kimenet, helyes de hiÃ¡nyos kimenet
+		-SzÃ¡mÃ­tÃ¡si hiba: helytelen algoritmus
+		-InterfÃ©sz hibÃ¡k
+		-Logikai hibÃ¡k: hiÃ¡nyzÃ³ esetek, redundÃ¡ns esetek, hiÃ¡nyzÃ³ feltÃ©telek,
+		-Adathiba: helytelen formÃ¡tum, inkonszisztens adat,
 
-		Így a tesztelés a következõképpen történik:
+		Ãgy a tesztelÃ©s a kÃ¶vetkezÅ‘kÃ©ppen tÃ¶rtÃ©nik:
 
-		-Belövési tesztek (debuggolás): a debuggolás hibakövetést jelent. A program
-		belsõ mûködését figyeljük meg töréspontok, vagy lépésenkénti végrehajtás
-		mentén. Nem csak a hiba meglétét, hanem a helyét is megmutatja.
-		-Részegység teszt: egy rendszer vagy szoftver komponens önmagában, a
-		rendszer többi elemétõl független vizsgálata.
-		-Egységtesztek és integrációs tesztek: Mint mondtuk a részegységek önálló
-		megfelelõ mûködése nem elegendõ, az egész rendszernek is jól kell
-		mûködnie. A legcélravezetõbb módszer a komponensenkénti, vagyis
-		inkrementális tesztelés. Az inkremenseket egyenként fûzzük össze és minden
-		egyes hozzáfûzés után tesztelünk. 
-		-Stresszteszt: a rendszer egészének mûködését teszteli. Célja a rendszer
-		teljesítményének felmérése szélsõséges körülmények között is. Két funkciója
-		van, megvédeni a rendszert a túrterhelés káros következményeitõl (pl.
-		adatvesztés), és a szélsõséges körülmények között kibukhatnak olyan hibák,
-		amelyek normál körülmények között csak nagyon lassan.
-		-Elfogadási teszt (acceptance teszt): az üzembe helyezés elõtti utolsó teszt,
-		amely már valós adatokkal zajlik. Ezt alfa tesztelésnek nevezzük. Ilyenkor
-		dokumentálják, hogy a program eleget tesz-e a megrendelõ elvárásainak. 
+		-BelÃ¶vÃ©si tesztek (debuggolÃ¡s): a debuggolÃ¡s hibakÃ¶vetÃ©st jelent. A program
+		belsÅ‘ mÅ±kÃ¶dÃ©sÃ©t figyeljÃ¼k meg tÃ¶rÃ©spontok, vagy lÃ©pÃ©senkÃ©nti vÃ©grehajtÃ¡s
+		mentÃ©n. Nem csak a hiba meglÃ©tÃ©t, hanem a helyÃ©t is megmutatja.
+		-RÃ©szegysÃ©g teszt: egy rendszer vagy szoftver komponens Ã¶nmagÃ¡ban, a
+		rendszer tÃ¶bbi elemÃ©tÅ‘l fÃ¼ggetlen vizsgÃ¡lata.
+		-EgysÃ©gtesztek Ã©s integrÃ¡ciÃ³s tesztek: Mint mondtuk a rÃ©szegysÃ©gek Ã¶nÃ¡llÃ³
+		megfelelÅ‘ mÅ±kÃ¶dÃ©se nem elegendÅ‘, az egÃ©sz rendszernek is jÃ³l kell
+		mÅ±kÃ¶dnie. A legcÃ©lravezetÅ‘bb mÃ³dszer a komponensenkÃ©nti, vagyis
+		inkrementÃ¡lis tesztelÃ©s. Az inkremenseket egyenkÃ©nt fÅ±zzÃ¼k Ã¶ssze Ã©s minden
+		egyes hozzÃ¡fÅ±zÃ©s utÃ¡n tesztelÃ¼nk. 
+		-Stresszteszt: a rendszer egÃ©szÃ©nek mÅ±kÃ¶dÃ©sÃ©t teszteli. CÃ©lja a rendszer
+		teljesÃ­tmÃ©nyÃ©nek felmÃ©rÃ©se szÃ©lsÅ‘sÃ©ges kÃ¶rÃ¼lmÃ©nyek kÃ¶zÃ¶tt is. KÃ©t funkciÃ³ja
+		van, megvÃ©deni a rendszert a tÃºrterhelÃ©s kÃ¡ros kÃ¶vetkezmÃ©nyeitÅ‘l (pl.
+		adatvesztÃ©s), Ã©s a szÃ©lsÅ‘sÃ©ges kÃ¶rÃ¼lmÃ©nyek kÃ¶zÃ¶tt kibukhatnak olyan hibÃ¡k,
+		amelyek normÃ¡l kÃ¶rÃ¼lmÃ©nyek kÃ¶zÃ¶tt csak nagyon lassan.
+		-ElfogadÃ¡si teszt (acceptance teszt): az Ã¼zembe helyezÃ©s elÅ‘tti utolsÃ³ teszt,
+		amely mÃ¡r valÃ³s adatokkal zajlik. Ezt alfa tesztelÃ©snek nevezzÃ¼k. Ilyenkor
+		dokumentÃ¡ljÃ¡k, hogy a program eleget tesz-e a megrendelÅ‘ elvÃ¡rÃ¡sainak. 
 
-      - Integrációs tesztstratégia specifikálása
-      - Speciális elõírások
+      - IntegrÃ¡ciÃ³s tesztstratÃ©gia specifikÃ¡lÃ¡sa:
+      
+		  -FeltÃ©telezzÃ¼k, hogy az Ã©pÃ­tÄ±elemek mÃ¡r Ã¶nmagukban teszteltek.
 
-	A tesztelést a célcsoport tagjai végzik.	
-
-8)Programegységek (csomagok) létrehozásának módja
-      - Speciális átlapolási elõírások
+	 	  -Ha hibÃ¡t Ã©szlelÃ¼nk, az feltehetÄ±leg a modulok  egyÃ¼ttmÅ‘kÃ¶dÃ©sÃ©bÄ±l adÃ³dik
+      
+     	   -EgyÃ¼ttmÅ‘kÃ¶dÅ‘ egysÃ©gek vizsgÃ¡lata:
+	 
+		 -Egy rÃ©szrendszert Ã¡llÃ­tunk Ã¶ssze
+		 
+		 -TÃ¶bbnyire csak technikai, nem funkcionÃ¡lis rÃ©szrendszerek.
 	
-	A szoftverlicence Free software, tehát a nyílt forrású szoftver. (A szerzõ közkincsé
-	teszi a program forráskódját, engedélyezi az abban való módosítást, a
-	szoftver ingyenes, szabad felhasználását és továbbadását.)
-	A licence szerzõdés rögzíti a terméktámogatás módját (frissítések, javítások, esetleg új
-	verzió), idõtartamát. A gyártó által vállalt jótállás és szavatosság információ is a licence
-	szerzõdésben található.  
+	   -System Level Testing (SLT):
+	 
+		 -A rendszer Ã¶sszes komponensÃ©nek teljes kÃ¶rÅ‘
+		 (funkcionÃ¡lis, nem funkcionÃ¡lis) tesztelÃ©se.
+		
+		 -Feladata annak megÃ¡llapÃ­tÃ¡sa, hogy a rendszer
+		 kiadhatÃ³-e a megrendelÅ‘nek (vÃ©gsÅ‘ ellenÅ‘rzÃ©s).
+		 
+		 -A fejlesztÅ‘ szervezeten belÃ¼l vÃ©gzik.
+		
+		 -SzÃ¼ksÃ©ges az Ã©les hasznÃ¡lat kÃ¶rnyezetÃ©nek minÃ©l pontosabb szimulÃ¡ciÃ³ja!
+		 
+	      -TerhelÃ©ses tesztelÃ©s (Stressz-tesztelÃ©s)
+			-A tesztelt rendszert valamilyen szempontbÃ³l erÅ‘s terhelÃ©snek teszi ki.
+			
+			-Fontos tÃ©nyezÅ‘ az idÅ‘!
+ 				Adott idÅ‘korlÃ¡ton belÃ¼l hogyan teljesÃ­t nagy mennyisÃ©gÅ± adatokon dolgozva.
+				
+			-IntenzÃ­v feldolgozÃ¡st kÃ­vÃ¡nÃ³ helyzeteket kell teremteni, melyek szÃ©lsÅ‘sÃ©gesek, de elÅ‘fordulhatnak.
+			
+			-A robosztussÃ¡g ellenÅ‘rzÃ©sÃ©re Ã©rdemes a terhelÃ©st olyan szintre is emelni, amely (elvileg) nem fordulhat
+			 elÅ‘.
+     
+     
+     - SpeciÃ¡lis elÅ‘Ã­rÃ¡sok
 
-      - Átalakítási feltételek
+	A tesztelÃ©st a cÃ©lcsoport tagjai vÃ©gzik.	
 
-	Átalakításra a kész szoftvernél a megrendelõ részérõl nincs lehetõség, a kész szoftver után lehet a következõ
-	verzióra szerzõdést kötni. 
+8)ProgramegysÃ©gek (csomagok) lÃ©trehozÃ¡sÃ¡nak mÃ³dja
+      - SpeciÃ¡lis Ã¡tlapolÃ¡si elÅ‘Ã­rÃ¡sok
+	
+	A szoftverlicence Free software, tehÃ¡t a nyÃ­lt forrÃ¡sÃº szoftver. (A szerzÅ‘ kÃ¶zkincsÃ©
+	teszi a program forrÃ¡skÃ³djÃ¡t, engedÃ©lyezi az abban valÃ³ mÃ³dosÃ­tÃ¡st, a
+	szoftver ingyenes, szabad felhasznÃ¡lÃ¡sÃ¡t Ã©s tovÃ¡bbadÃ¡sÃ¡t.)
+	A licence szerzÅ‘dÃ©s rÃ¶gzÃ­ti a termÃ©ktÃ¡mogatÃ¡s mÃ³djÃ¡t (frissÃ­tÃ©sek, javÃ­tÃ¡sok, esetleg Ãºj
+	verziÃ³), idÅ‘tartamÃ¡t. A gyÃ¡rtÃ³ Ã¡ltal vÃ¡llalt jÃ³tÃ¡llÃ¡s Ã©s szavatossÃ¡g informÃ¡ciÃ³ is a licence
+	szerzÅ‘dÃ©sben talÃ¡lhatÃ³.  
+
+      - ÃtalakÃ­tÃ¡si feltÃ©telek
+
+	ÃtalakÃ­tÃ¡sra a kÃ©sz szoftvernÃ©l a megrendelÅ‘ rÃ©szÃ©rÅ‘l nincs lehetÅ‘sÃ©g, a kÃ©sz szoftver utÃ¡n lehet a kÃ¶vetkezÅ‘
+	verziÃ³ra szerzÅ‘dÃ©st kÃ¶tni. 

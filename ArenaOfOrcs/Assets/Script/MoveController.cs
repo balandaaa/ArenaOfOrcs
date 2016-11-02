@@ -5,38 +5,42 @@ public class MoveController : MonoBehaviour
 {
 
     public LayerMask ground;
-    public Transform GroundCheck;
     private Vector2 targetPosition;
-    public float speed = 5;
+    public float speed = 25;
     public bool lookRight = true;
     private Animator animator;
-    public bool isGrounded = false;
-    public bool isWall = false;
-    public bool jump = false;
-    GameObject wall;
-    public Transform WallCheck;
-    public float jumpForce = 1000f;
-    void Start()
+   
+
+	private bool onGround; 
+	public float jumpPressure;
+	public float minJump;
+	public float maxJumpPressure;
+	private Rigidbody2D rb;
+
+	void Start()
     {
 
         targetPosition = transform.position;
-        animator = GetComponent<Animator>();
-        wall = GameObject.Find("Cube");
-
+		animator = GetComponent<Animator>();
+		onGround = true;
+		jumpPressure = 0f;
+		minJump = 5f;
+		maxJumpPressure = 10f;
+		rb = GetComponent<Rigidbody2D> ();
     }
 
 
     void Update()
     {
+		onGround = true;
         transform.Rotate(0, 0, 0);
         // isGrounded = Physics2D.OverlapCircle(GroundCheck.position, 0.15f, ground);
-        isGrounded = Physics2D.Linecast(transform.position, GroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        isWall = Physics2D.Linecast(transform.position, WallCheck.position, 1 << LayerMask.NameToLayer("Wall"));
+       // isGrounded = Physics2D.Linecast(transform.position, GroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         /*   float moveHorizontal = Input.GetAxis("Horizontal");
            Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
            rb.AddForce(movement);*/
 
-        if (Input.GetKey(KeyCode.LeftArrow) && isWall && targetPosition.x > -15)
+        if (Input.GetKey(KeyCode.LeftArrow) && targetPosition.x > -15)
         {
             targetPosition -= new Vector2(0.25f * Time.deltaTime * speed, 0);
 
@@ -52,11 +56,22 @@ public class MoveController : MonoBehaviour
             else
                 animator.SetTrigger("special");
         }
-        if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
-        {
-            jump = true;
-            //isGrounded = false;
-        }
+		if (onGround) {
+			if (Input.GetButton ("Jump")) {
+				if (jumpPressure < maxJumpPressure) {
+					jumpPressure += Time.deltaTime * 10f;
+				} else {
+					jumpPressure = maxJumpPressure;
+				}
+			} else {
+				if (jumpPressure > 0f) {
+					jumpPressure = jumpPressure + minJump;
+					transform.position = new Vector2(transform.position.x, transform.position.y + minJump);
+					jumpPressure = 0f;
+					onGround = false;
+				}
+			}
+		}
 
 
 
@@ -77,15 +92,14 @@ public class MoveController : MonoBehaviour
 
         animator.SetFloat("speed", (transform.position - p).magnitude / Time.deltaTime);
     }
+	void OnTriggerEnter(Collider other){
+		if(other.gameObject.CompareTag("ground")){
+			onGround = true;
+		}
+	}
     void FixedUpdate()
     {
-        if (jump && transform.position.y <= 0.0f)
-        {
-            jump = false;
-            transform.position = new Vector2(transform.position.x, transform.position.y + jumpForce);
-            // rb2d.AddForce(new Vector2(0f, jumpForce),ForceMode2D.Impulse);
-
-        }
+       
     }
     public void Flip()
     {

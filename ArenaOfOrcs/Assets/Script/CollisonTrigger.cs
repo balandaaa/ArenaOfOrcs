@@ -4,9 +4,9 @@ using System.Collections;
 public class CollisonTrigger : MonoBehaviour {
 	private BoxCollider2D playerCollider;
 	[SerializeField]
-	private BoxCollider2D platformCollider;
+	private EdgeCollider2D platformCollider;
 	[SerializeField]
-	private BoxCollider2D platformTrigger;
+	private EdgeCollider2D platformTrigger;
 	// Use this for initialization
 	void Start () {
 		playerCollider = GameObject.Find ("Player").GetComponent<BoxCollider2D> ();

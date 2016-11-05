@@ -26,10 +26,15 @@ public class MoveController : MonoBehaviour
 	}
 	void Update(){
 		HandleInput ();
+		if (transform.position.y < -1) {
+			//Application.LoadLevel (Application.loadedLevel);
+
+		}
 	}
 	void FixedUpdate(){
 		float horizontal = Input.GetAxis ("Horizontal");
 		isGrounded = IsGrounded ();
+	
 		HandleMovement (horizontal);
 		Flip (horizontal);
 		HandleAttacks ();
@@ -39,7 +44,7 @@ public class MoveController : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			attack = true;
 		}
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+		if (Input.GetButtonDown("Vertical") && Input.GetAxis("Vertical") >= 0) {
 			jump = true;
 		}
 	}

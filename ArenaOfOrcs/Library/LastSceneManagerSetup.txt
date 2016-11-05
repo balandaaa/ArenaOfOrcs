@@ -1,7 +1,7 @@
 sceneSetups:
-- path: Assets/Scenes/Tesztpalya.unity
+- path: Assets/Scenes/warrior.unity
   isLoaded: 1
   isActive: 1
-- path: Assets/Scenes/warrior.unity
+- path: Assets/Scenes/Tesztpalya.unity
   isLoaded: 1
   isActive: 0

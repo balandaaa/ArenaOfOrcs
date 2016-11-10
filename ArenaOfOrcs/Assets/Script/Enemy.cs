@@ -24,9 +24,18 @@ public class Enemy : Character {
 	}
 	public void Move(){
 		myAnimator.SetFloat ("speed", 1);
-		transform.Translate (GetDirection () * (movementSpeed * Time.deltaTime));
-	}
+		//transform.Translate (GetDirection () * (movementSpeed * Time.deltaTime));
+        if(GetDirection()==Vector2.left)
+            rb.velocity = new Vector2(1 * movementSpeed, rb.velocity.y);
+        else
+            rb.velocity = new Vector2(-1 * movementSpeed, rb.velocity.y);
+
+    }
 	public Vector2 GetDirection(){
-		return facingRight ? Vector2.right : Vector2.left;
+		return facingRight ? Vector2.left : Vector2.right;
 	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        curentState.OnTriggerEnter(other);
+    }
 }

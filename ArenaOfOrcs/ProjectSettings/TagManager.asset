@@ -7,7 +7,7 @@ TagManager:
   - ground
   - Edge
   - Enemy
-  - Wall
+  - weapon
   - Obstacle
   - Bullet
   - BombPickup

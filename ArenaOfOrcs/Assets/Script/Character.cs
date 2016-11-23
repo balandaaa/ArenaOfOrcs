@@ -22,6 +22,23 @@ public abstract class Character : MonoBehaviour {
 	void Update () {
 	
 	}
+	private float _eletero;
+	public float eletero
+	{
+		get
+		{
+			return _eletero;
+		}
+
+		set
+		{
+			if (value <= 100)
+				_eletero = value;
+			else
+				Debug.Log ("Max élet");
+		}
+	}
+
 	public void ChangeDirection(){
 		facingRight = !facingRight;
 		//transform.localScale = new Vector2 (transform.localScale.x * -1, 0.5f);
@@ -29,4 +46,5 @@ public abstract class Character : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+		
 }

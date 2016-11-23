@@ -12,9 +12,10 @@ public class Player : Character
 	private float groundRadius;
 	[SerializeField]
 	private LayerMask whatIsGround;
-
+	Enemy enemy;
 	public override void Start(){
 		base.Start ();
+
 		rb = GetComponent<Rigidbody2D> ();
 	}
 	void Update(){
@@ -52,10 +53,13 @@ public class Player : Character
 	}
 	private void HandleAttacks(){
 		if (attack) {
-			if (Random.Range(0f, 1.0f) > 0.5f)
-				myAnimator.SetTrigger("attack");
-			else
-				myAnimator.SetTrigger("special");
+			if (Random.Range (0f, 1.0f) > 0.5f) {
+				myAnimator.SetTrigger ("attack");
+
+			} else {
+				myAnimator.SetTrigger ("special");
+
+			}
 		}
 	}
 	private void Flip(float horizontal){
@@ -80,5 +84,7 @@ public class Player : Character
 		}
 		return false;
 	}
-
+	void OnTriggerEnter2D(Collider2D other) {
+		
+	}
 }

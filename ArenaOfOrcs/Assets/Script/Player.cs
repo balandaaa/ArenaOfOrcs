@@ -13,16 +13,16 @@ public class Player : Character
 	private float groundRadius;
 	[SerializeField]
 	private LayerMask whatIsGround;
-	Enemy enemy;
 	[SerializeField]
 	private Text healthText;
+	public GameObject e;
+	private Transform enemy;
 	public override void Start(){
 		base.Start ();
-
 		rb = GetComponent<Rigidbody2D> ();
+		enemy = GameObject.Find ("Enemy").transform;
 	}
 	void Update(){
-		
 		healthText.text=health+"/100";
 		HandleInput ();
 		if (transform.position.y < -1) {
@@ -59,9 +59,9 @@ public class Player : Character
 	private void HandleAttacks(){
 		if (attack) {
 			//WeaponCollider.enabled = true;
+
 			if (Random.Range (0f, 1.0f) > 0.5f) {
 				myAnimator.SetTrigger ("attack");
-
 			} else {
 				myAnimator.SetTrigger ("special");
 
@@ -93,9 +93,8 @@ public class Player : Character
 		return false;
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Enemy") {
-			health -= 20;
-			//StartCoroutine(TakeDamage ());
+		if (other.tag == "Enemy" ) {
+			StartCoroutine(TakeDamage (20));
 		}
 	}
 	public override bool IsDead{
@@ -104,8 +103,8 @@ public class Player : Character
 		}
 	}
 
-	public override IEnumerator TakeDamage (){
-		health -= 20;
+	public override IEnumerator TakeDamage (int damage){
+		health -= damage;
 		if (!IsDead) {
 			/*if (Random.Range (0f, 1.0f) > 0.5f) {
 				myAnimator.SetTrigger ("attack");

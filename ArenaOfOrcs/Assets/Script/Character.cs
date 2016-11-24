@@ -37,6 +37,6 @@ public abstract class Character : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-	public abstract IEnumerator TakeDamage ();	
+	public abstract IEnumerator TakeDamage (int damage);	
 
 }

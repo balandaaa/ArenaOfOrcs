@@ -8,17 +8,18 @@ public class Enemy : Character
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
-		eletero = 100;
 		player = GameObject.Find ("Player").transform;
+
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Enemy heal: ");
-		Debug.Log(eletero);
-		if (eletero < 0) {
+		//Debug.Log ("Enemy heal: ");
+		//Debug.Log (health);
+
+		if (IsDead) {
 			myAnimator.SetFloat ("dead", 1);
 		} else {
 			if (player.transform.position.x - transform.position.x < 0 || player.transform.position.x - transform.position.x > 1f) {
@@ -27,13 +28,14 @@ public class Enemy : Character
 				myAnimator.SetFloat ("walk", 0);
 			}
 		}
-		if (Mathf.Abs (player.transform.position.x - transform.position.x) < 1.5f && (player.localScale.x>0 && transform.localScale.x < 0 || player.localScale.x<0 && transform.localScale.x > 0)) {
-			Attack ();
-			//myAnimator.SetTrigger("attack");
-		} else {
-			myAnimator.SetFloat ("attack", 0);
-		}
 
+			if (!IsDead && Mathf.Abs (player.transform.position.x - transform.position.x) < 1.5f && (player.localScale.x>0 && transform.localScale.x < 0 || player.localScale.x<0 && transform.localScale.x > 0)) {
+				Attack ();
+				//myAnimator.SetTrigger("attack");
+			} else {
+				myAnimator.SetFloat ("attack", 0);
+			}
+		
 	}
 	public void FixedUpdate(){
 		ResetValues ();
@@ -56,17 +58,35 @@ public class Enemy : Character
 		{
 			ChangeDirection ();
 		}
-		if (other.tag == "weapon") {
-			eletero -= 50;
+		if (other.tag == "weapon" && !IsDead ) {
+			StartCoroutine(TakeDamage ());
 		}
 	}
 	public void Attack ()
 	{
-		
+		attack = true;
 			//myAnimator.SetTrigger("attack");
 			myAnimator.SetFloat ("attack", 1);
 			Debug.Log ("ütök");
 
+	}
+	public override bool IsDead{
+		get{
+			return health <= 0;
+		}
+	}
+
+	public override IEnumerator TakeDamage (){
+		health -= 20;
+		if (!IsDead) {
+			
+			Move ();
+			myAnimator.SetFloat ("attack", 1);
+		} else {
+			myAnimator.SetFloat ("dead", 1);
+			Debug.Log ("Enemy meghalt");
+			yield return null;
+		}
 	}
 	private void ResetValues(){
 		attack = false;

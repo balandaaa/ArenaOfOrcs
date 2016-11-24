@@ -11,10 +11,15 @@ public abstract class Character : MonoBehaviour {
 	protected bool jump;
 	[SerializeField]
 	protected float jumpForce;
+	[SerializeField]
+	protected int health;
+	public abstract bool IsDead{ get;}
+	protected EdgeCollider2D WeaponCollider;
 	// Use this for initialization
 	public virtual void Start () {
 		facingRight = true;
 		myAnimator = GetComponent<Animator> ();
+		WeaponCollider= GameObject.Find ("orc_weapon").GetComponent<EdgeCollider2D> ();
 
 	}
 	
@@ -22,22 +27,8 @@ public abstract class Character : MonoBehaviour {
 	void Update () {
 	
 	}
-	private float _eletero;
-	public float eletero
-	{
-		get
-		{
-			return _eletero;
-		}
 
-		set
-		{
-			if (value <= 100)
-				_eletero = value;
-			else
-				Debug.Log ("Max élet");
-		}
-	}
+
 
 	public void ChangeDirection(){
 		facingRight = !facingRight;
@@ -46,5 +37,6 @@ public abstract class Character : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-		
+	public abstract IEnumerator TakeDamage ();	
+
 }

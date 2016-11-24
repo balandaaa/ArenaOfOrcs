@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI; 
 using System.Collections;
 
 public class Player : Character
@@ -13,12 +14,16 @@ public class Player : Character
 	[SerializeField]
 	private LayerMask whatIsGround;
 	Enemy enemy;
+	[SerializeField]
+	private Text healthText;
 	public override void Start(){
 		base.Start ();
 
 		rb = GetComponent<Rigidbody2D> ();
 	}
 	void Update(){
+		
+		healthText.text=health+"/100";
 		HandleInput ();
 		if (transform.position.y < -1) {
 			//Application.LoadLevel (Application.loadedLevel);
@@ -53,6 +58,7 @@ public class Player : Character
 	}
 	private void HandleAttacks(){
 		if (attack) {
+			//WeaponCollider.enabled = true;
 			if (Random.Range (0f, 1.0f) > 0.5f) {
 				myAnimator.SetTrigger ("attack");
 
@@ -60,6 +66,8 @@ public class Player : Character
 				myAnimator.SetTrigger ("special");
 
 			}
+		} else {
+			//WeaponCollider.enabled = false;
 		}
 	}
 	private void Flip(float horizontal){
@@ -85,6 +93,31 @@ public class Player : Character
 		return false;
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-		
+		if (other.tag == "Enemy") {
+			health -= 20;
+			//StartCoroutine(TakeDamage ());
+		}
 	}
+	public override bool IsDead{
+		get{
+			return health <= 0;
+		}
+	}
+
+	public override IEnumerator TakeDamage (){
+		health -= 20;
+		if (!IsDead) {
+			/*if (Random.Range (0f, 1.0f) > 0.5f) {
+				myAnimator.SetTrigger ("attack");
+
+			} else {
+				myAnimator.SetTrigger ("special");
+
+			}*/
+		} else {
+			Debug.Log ("Ork meghalt");
+			yield return null;
+		}
+	}
+
 }

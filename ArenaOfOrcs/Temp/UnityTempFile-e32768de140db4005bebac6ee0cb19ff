@@ -92,7 +92,7 @@ Assets/Script/Character.cs
 Assets/Script/Character2.cs
 Assets/Script/CollisonTrigger.cs
 Assets/Script/Enemy.cs
-Assets/Script/MenuContoller.cs
+Assets/Script/MenuController.cs
 Assets/Script/Player.cs
 Assets/Script/Weapon.cs
 -r:/opt/Unity/Editor/Data/Mono/lib/mono/unity/System.Runtime.Serialization.dll

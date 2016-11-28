@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Characters.unity
+- path: Assets/Scenes/menu.unity
   isLoaded: 1
   isActive: 1
-- path: Assets/Scenes/Tesztpalya.unity
-  isLoaded: 1
-  isActive: 0

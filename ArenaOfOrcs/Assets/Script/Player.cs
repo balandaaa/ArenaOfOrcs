@@ -26,7 +26,7 @@ public class Player : Character
 		healthText.text=health+"/100";
 		HandleInput ();
 		if (transform.position.y < -1) {
-			//Application.LoadLevel (Application.loadedLevel);
+			Application.LoadLevel ("menu");
 
 		}
 	}
@@ -104,15 +104,9 @@ public class Player : Character
 	}
 
 	public override IEnumerator TakeDamage (int damage){
-		health -= damage;
+		
 		if (!IsDead) {
-			/*if (Random.Range (0f, 1.0f) > 0.5f) {
-				myAnimator.SetTrigger ("attack");
-
-			} else {
-				myAnimator.SetTrigger ("special");
-
-			}*/
+			health -= damage;
 		} else {
 			Debug.Log ("Ork meghalt");
 			yield return null;

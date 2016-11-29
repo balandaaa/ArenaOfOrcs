@@ -5,19 +5,17 @@ public class Enemy : Character
 {
 	private Rigidbody2D rb;
 	private Transform player;
-	public GameObject p;
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
 		player = GameObject.Find ("Player").transform;
-	
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (transform.position.x-player.transform.position.x);
+		
 
 		if (IsDead) {
 			myAnimator.SetFloat ("dead", 1);
@@ -59,7 +57,7 @@ public class Enemy : Character
 			ChangeDirection ();
 		}
 		//if (Input.GetKey(KeyCode.LeftControl)) {
-		if (other.tag == "weapon" && !IsDead && p.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("attack")) {
+		if (other.tag == "weapon" && !IsDead && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("attack")) {
 			StartCoroutine (TakeDamage (10));
 			}
 		//}
@@ -86,7 +84,6 @@ public class Enemy : Character
 			myAnimator.SetFloat ("attack", 1);
 		} else {
 			myAnimator.SetFloat ("dead", 1);
-			Debug.Log ("Enemy meghalt");
 			yield return null;
 		}
 	}

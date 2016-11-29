@@ -15,6 +15,9 @@ public class Player : Character
 	private LayerMask whatIsGround;
 	[SerializeField]
 	private Text healthText;
+	[SerializeField]
+	private Text scoreText;
+	int score = 0;
 	public GameObject e;
 	private Transform enemy;
 	public override void Start(){
@@ -24,8 +27,9 @@ public class Player : Character
 	}
 	void Update(){
 		healthText.text=health+"/100";
+		scoreText.text = "Score: " + score;
 		HandleInput ();
-		if (transform.position.y < -1) {
+		if (transform.position.y < -1 || health <= 0) {
 			Application.LoadLevel ("menu");
 
 		}
@@ -104,13 +108,16 @@ public class Player : Character
 	}
 
 	public override IEnumerator TakeDamage (int damage){
-		
+		health -= damage;
 		if (!IsDead) {
-			health -= damage;
+			
 		} else {
 			Debug.Log ("Ork meghalt");
 			yield return null;
 		}
+	}
+	public void AddScore(int score){
+		this.score += score;
 	}
 
 }

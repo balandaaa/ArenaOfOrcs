@@ -6,12 +6,21 @@ public class Enemy : Character
 	private Rigidbody2D rb;
 	private Transform player;
 	// Use this for initialization
+	private Player playerController;
 	public override void Start () {
 		base.Start ();
 		player = GameObject.Find ("Player").transform;
 		rb = GetComponent<Rigidbody2D> ();
+		GameObject gameControllerObject = GameObject.FindWithTag ("Player");
+		if (gameControllerObject != null)
+		{
+			playerController = gameControllerObject.GetComponent <Player>();
+		}
+		if (playerController == null)
+		{
+			Debug.Log ("Cannot find 'GameController' script");
+		}
 	}
-
 
 	// Update is called once per frame
 	void Update () {
@@ -37,6 +46,7 @@ public class Enemy : Character
 	}
 	public void FixedUpdate(){
 		ResetValues ();
+
 	}
 	public void Move(){
 		myAnimator.SetFloat ("walk", 1);
@@ -62,6 +72,7 @@ public class Enemy : Character
 			}
 		//}
 	}
+
 	public void Attack ()
 	{
 		attack = true;
@@ -84,9 +95,13 @@ public class Enemy : Character
 			myAnimator.SetFloat ("attack", 1);
 		} else {
 			myAnimator.SetFloat ("dead", 1);
+			yield return new WaitForSeconds(2);
+			playerController.AddScore (10);
+			Destroy(gameObject);
 			yield return null;
 		}
 	}
+
 	private void ResetValues(){
 		attack = false;
 	}

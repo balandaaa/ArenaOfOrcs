@@ -242,7 +242,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &52382732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +677,7 @@ GameObject:
   - 61: {fileID: 472714060}
   - 114: {fileID: 472714059}
   m_Layer: 0
-  m_Name: Enemy (2)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +697,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &472714060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1160,7 +1159,7 @@ GameObject:
   - 61: {fileID: 849072688}
   - 114: {fileID: 849072687}
   m_Layer: 0
-  m_Name: Enemy (5)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1180,7 +1179,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &849072688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1668,7 +1666,7 @@ GameObject:
   - 61: {fileID: 1162837093}
   - 114: {fileID: 1162837092}
   m_Layer: 0
-  m_Name: Enemy (1)
+  m_Name: 'Enemy '
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1688,7 +1686,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &1162837093
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1935,7 +1932,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &1466198120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2317,7 +2313,7 @@ GameObject:
   - 61: {fileID: 1702044540}
   - 114: {fileID: 1702044539}
   m_Layer: 0
-  m_Name: Enemy (6)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2337,7 +2333,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &1702044540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2752,7 +2747,7 @@ GameObject:
   - 61: {fileID: 1959453667}
   - 114: {fileID: 1959453666}
   m_Layer: 0
-  m_Name: Enemy (4)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2772,7 +2767,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &1959453667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2882,7 +2876,7 @@ GameObject:
   - 61: {fileID: 1977762455}
   - 114: {fileID: 1977762454}
   m_Layer: 0
-  m_Name: Enemy (3)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2902,7 +2896,6 @@ MonoBehaviour:
   movementSpeed: 1
   jumpForce: 0
   health: 40
-  p: {fileID: 0}
 --- !u!61 &1977762455
 BoxCollider2D:
   m_ObjectHideFlags: 0

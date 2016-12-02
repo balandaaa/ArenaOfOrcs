@@ -71,6 +71,7 @@ public class Enemy : Character
 			StartCoroutine (TakeDamage (10));
 			}
 		//}
+
 	}
 
 	public void Attack ()

@@ -17,12 +17,12 @@ public class CollisonTrigger : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerEnter2D(Collider2D other){ 
 		if (other.gameObject.name == "Player") {
-			Physics2D.IgnoreCollision (platformCollider, playerCollider, false);
+			Physics2D.IgnoreCollision (platformCollider, other, true);
 		}
 	}
 	void OnTriggerExit2D(Collider2D other){
 		if (other.gameObject.name == "Player") {
-			Physics2D.IgnoreCollision (playerCollider, platformTrigger, false);
+			Physics2D.IgnoreCollision (playerCollider, other, false);
 		}
 	}
 }

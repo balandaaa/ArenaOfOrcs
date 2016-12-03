@@ -5,14 +5,14 @@ public abstract class Character : MonoBehaviour {
 	public Animator myAnimator{ get; private set; }	
 	[SerializeField]
 	protected float movementSpeed;
-	protected bool facingRight;
+	public bool facingRight;
 	protected bool attack;
 	protected bool isGrounded;
 	protected bool jump;
 	[SerializeField]
 	protected float jumpForce;
 	[SerializeField]
-	protected int health;
+	protected float health;
 	public abstract bool IsDead{ get;}
 	protected EdgeCollider2D WeaponCollider;
 	// Use this for initialization
@@ -37,6 +37,6 @@ public abstract class Character : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-	public abstract IEnumerator TakeDamage (int damage);	
+    public abstract void Damage(float damage);
 
 }

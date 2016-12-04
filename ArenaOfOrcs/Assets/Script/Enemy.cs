@@ -7,12 +7,11 @@ public class Enemy : Character
     private Transform player;
     // Use this for initialization
     private Player playerController;
-    float timeLeft = 30;
     private bool tamatok;
     private float attackTimer;
     private float attackCooldown = 0.001f;
     private bool canAttack = true;
-    float deadTimer =2f;
+    float deadTimer = 2f;
 
     public override void Start()
     {
@@ -33,14 +32,19 @@ public class Enemy : Character
     // Update is called once per frame
     void Update()
     {
-       
-       // Debug.Log(deadTimer);
-      
+        float xDir = player.transform.position.x - transform.position.x;
+        float yDir = player.transform.position.y - transform.position.y;
+        if (yDir > -2 && yDir < 1 && (xDir < 0 && xDir > -4 && facingRight || xDir > 0 && xDir < 4 && !facingRight))
+        {
+            ChangeDirection();
+        }
+        // Debug.Log(deadTimer);
+
         if (IsDead)
         {
             deadTimer -= Time.deltaTime;
             myAnimator.SetFloat("dead", 1);
-          
+
             if (deadTimer < 0)
             {
                 playerController.AddScore(10);
@@ -98,7 +102,7 @@ public class Enemy : Character
         }
         //if (Input.GetKey(KeyCode.LeftControl)) {
         //if (other.tag == "weapon" && !IsDead && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("attack")) {
-        	//Damage ();
+        //Damage ();
         //	}
         //}
 
@@ -124,7 +128,7 @@ public class Enemy : Character
         else
         {
             myAnimator.SetFloat("dead", 1);
-            
+
 
         }
 
@@ -144,7 +148,7 @@ public class Enemy : Character
     public override void Damage(float damage)
     {
         health -= damage;
-        
+
     }
 
     private void ResetValues()

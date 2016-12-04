@@ -30,13 +30,13 @@ public class Player : Character
         base.Start();
         rb = GetComponent<Rigidbody2D>();
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
+        
         //GameObject gameControllerObject = GameObject.FindWithTag("Enemy");
 
     }
     void Update()
     {
-
+        Debug.Log(enemies.Length);
         foreach (GameObject item in enemies)
         {
             if (item != null)

@@ -47,6 +47,7 @@ public class Enemy : Character
              
                    
                 playerController.AddScore(10);
+                playerController.AddKilled();
                 Destroy(gameObject);
 
             }

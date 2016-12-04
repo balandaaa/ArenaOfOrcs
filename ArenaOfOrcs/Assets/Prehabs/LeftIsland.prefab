@@ -59,6 +59,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012966928986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010115249102}
+  - 61: {fileID: 61000010724803366}
+  m_Layer: 0
+  m_Name: Edge (6)
+  m_TagString: Edge
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013052654402
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +107,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000010115249102
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012966928986}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.9, y: 3.5, z: 0.9819199}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013467699904}
+  m_RootOrder: 0
 --- !u!4 &4000010234986842
 Transform:
   m_ObjectHideFlags: 1
@@ -103,7 +132,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013467699904}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &4000013334934478
 Transform:
   m_ObjectHideFlags: 1
@@ -116,18 +145,19 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013467699904}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &4000013467699904
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012593982916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.458, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -85.46001, y: -3.071611, z: 0}
+  m_LocalScale: {x: 1.6666667, y: 1.6666666, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4000010115249102}
   - {fileID: 4000013964703324}
   - {fileID: 4000013334934478}
   - {fileID: 4000014045519488}
@@ -146,7 +176,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013467699904}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000014045519488
 Transform:
   m_ObjectHideFlags: 1
@@ -159,7 +189,21 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013467699904}
-  m_RootOrder: 2
+  m_RootOrder: 3
+--- !u!61 &61000010724803366
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012966928986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.6977691, y: 1.0318236}
+  serializedVersion: 2
+  m_Size: {x: 1.3057017, y: 2.242075}
 --- !u!68 &68000013529115764
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -174,7 +218,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: -5.2335625, y: 3.7720213}
-  - {x: -0.25345564, y: 3.7451181}
+  - {x: -0.25345612, y: 3.7906878}
 --- !u!212 &212000010167878636
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -17,6 +17,7 @@ public class Player : Character
     private Text healthText;
     [SerializeField]
     private Text scoreText;
+
     int score = 0;
     private Transform enemy;
     [SerializeField]
@@ -27,6 +28,13 @@ public class Player : Character
     private float attackRange = 3f;
     private GameObject[] enemies;
     float pauseTimer = 0.2f;
+    [SerializeField]
+    private GameObject winUI;
+    [SerializeField]
+    private Text maxScoreText;
+    int enemyKilledCounter = 0;
+    [SerializeField]
+    private Text enemyKilledText;
     public override void Start()
     {
         base.Start();
@@ -59,10 +67,11 @@ public class Player : Character
         {
             EndGame();
         }
-        Debug.Log(pauseTimer);
+        if (enemies.Length == 0)
+            win();
         if (Input.GetButtonDown("Paused"))
         {
-          
+
             PauseUI.SetActive(true);
 
             if (Time.timeScale == 1)
@@ -197,9 +206,22 @@ public class Player : Character
     {
         this.score += score;
     }
+    public void AddKilled()
+    {
+        enemyKilledCounter++;
+    }
     void EndGame()
     {
         GameOverUI.SetActive(true);
+        healthText.text = "";
+        scoreText.text = "";
+
+    }
+    void win()
+    {
+        winUI.SetActive(true);
+        maxScoreText.text = "Max Score: " + score;
+        enemyKilledText.text = "Killed enemy: " + enemyKilledCounter;
         healthText.text = "";
         scoreText.text = "";
 

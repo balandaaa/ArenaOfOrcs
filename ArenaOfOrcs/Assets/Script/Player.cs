@@ -18,7 +18,6 @@ public class Player : Character
     [SerializeField]
     private Text scoreText;
     int score = 0;
-    public GameObject e;
     private Transform enemy;
     [SerializeField]
     private GameObject GameOverUI;
@@ -29,14 +28,14 @@ public class Player : Character
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+      
         
         //GameObject gameControllerObject = GameObject.FindWithTag("Enemy");
 
     }
     void Update()
     {
-        Debug.Log(enemies.Length);
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject item in enemies)
         {
             if (item != null)
@@ -47,7 +46,7 @@ public class Player : Character
                 }
             }
         }
-
+     
         // Debug.Log(Vector2.Distance(transform.position, getNearesEnemy().transform.position));
         healthText.text = (int)health * 10 + "/100";
         scoreText.text = "Score: " + score;
@@ -92,6 +91,7 @@ public class Player : Character
         {
             isGrounded = false;
             rb.AddForce(new Vector2(0, jumpForce));
+            GetComponent<AudioSource>().Play();
         }
         rb.velocity = new Vector2(horizontal * movementSpeed, rb.velocity.y);
         myAnimator.SetFloat("speed", Mathf.Abs(horizontal));

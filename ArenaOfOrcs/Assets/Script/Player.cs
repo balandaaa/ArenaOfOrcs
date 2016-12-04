@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
@@ -24,6 +25,8 @@ public class Player : Character
     private GameObject GameOverUI;
     [SerializeField]
     private GameObject PauseUI;
+    [SerializeField]
+    private GameObject NextButton;
     private Enemy enemyController;
     private float attackRange = 3f;
     private GameObject[] enemies;
@@ -224,6 +227,14 @@ public class Player : Character
         enemyKilledText.text = "Killed enemy: " + enemyKilledCounter;
         healthText.text = "";
         scoreText.text = "";
-
+       if(SceneManager.sceneCountInBuildSettings > SceneManager.GetActiveScene().buildIndex+1)
+        {
+            NextButton.SetActive(true);
+        }
+        else
+        {
+            NextButton.SetActive(false);
+        }
+        
     }
 }

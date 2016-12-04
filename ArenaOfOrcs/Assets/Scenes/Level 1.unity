@@ -164,6 +164,11 @@ Prefab:
       propertyPath: enemyKilledText
       value: 
       objectReference: {fileID: 1933900004}
+    - target: {fileID: 114000014279221394, guid: c43d60be3f6d5404e87388d10cef2c3c,
+        type: 2}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 777600648}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c43d60be3f6d5404e87388d10cef2c3c, type: 2}
   m_IsPrefabParent: 0
@@ -756,6 +761,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013399420572, guid: bf9a5aaa1dcd36b4dbc1c4943629a1a6,
     type: 2}
   m_PrefabInternal: {fileID: 766051606}
+--- !u!1 &777600648 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011462106240, guid: 7177959e4f8a2bc4598e8fe4cca560bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 2021538420}
 --- !u!1001 &790752490
 Prefab:
   m_ObjectHideFlags: 0
@@ -1664,14 +1674,6 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 75294a4a88b4f3248a0072e93cd68fc0, type: 2}
-    - target: {fileID: 1000011273797700, guid: 7177959e4f8a2bc4598e8fe4cca560bd, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014093306744, guid: 7177959e4f8a2bc4598e8fe4cca560bd, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7177959e4f8a2bc4598e8fe4cca560bd, type: 2}
   m_IsPrefabParent: 0

@@ -1622,6 +1622,11 @@ Prefab:
       propertyPath: enemyKilledText
       value: 
       objectReference: {fileID: 720563434}
+    - target: {fileID: 114000014279221394, guid: c43d60be3f6d5404e87388d10cef2c3c,
+        type: 2}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 2082541968}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c43d60be3f6d5404e87388d10cef2c3c, type: 2}
   m_IsPrefabParent: 0
@@ -1924,6 +1929,14 @@ Prefab:
     - target: {fileID: 224000014156090436, guid: 7177959e4f8a2bc4598e8fe4cca560bd,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014062965990, guid: 7177959e4f8a2bc4598e8fe4cca560bd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014093306744, guid: 7177959e4f8a2bc4598e8fe4cca560bd, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2996,6 +3009,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &2082541968 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011462106240, guid: 7177959e4f8a2bc4598e8fe4cca560bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293177365}
 --- !u!1 &2090764587
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,15 +21,18 @@ public class Player : Character
     private Transform enemy;
     [SerializeField]
     private GameObject GameOverUI;
+    [SerializeField]
+    private GameObject PauseUI;
     private Enemy enemyController;
     private float attackRange = 3f;
     private GameObject[] enemies;
+    float pauseTimer = 0.2f;
     public override void Start()
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
-      
-        
+
+
         //GameObject gameControllerObject = GameObject.FindWithTag("Enemy");
 
     }
@@ -46,7 +49,7 @@ public class Player : Character
                 }
             }
         }
-     
+
         // Debug.Log(Vector2.Distance(transform.position, getNearesEnemy().transform.position));
         healthText.text = (int)health * 10 + "/100";
         scoreText.text = "Score: " + score;
@@ -55,6 +58,23 @@ public class Player : Character
         if (transform.position.y < -1 || IsDead)
         {
             EndGame();
+        }
+        Debug.Log(pauseTimer);
+        if (Input.GetButtonDown("Paused"))
+        {
+          
+            PauseUI.SetActive(true);
+
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+
+            }
+            else
+            {
+                Time.timeScale = 1;
+                PauseUI.SetActive(false);
+            }
         }
     }
     void FixedUpdate()

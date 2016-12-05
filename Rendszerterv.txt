@@ -1,5 +1,5 @@
 
-1)Programrendszer célja
+1) Programrendszer célja
       - Rendszercélok
 
 	A célszoftver a megrendelő igényeinek megfelelő szoftver. A követelmények a rendszer specifikációban foglaltak, 
@@ -62,39 +62,41 @@
       - A programrendszer funkciói és struktúrája (rendszerdiagram, menüszerkezet).
       - Tervezési feltételek, korlátozó tényezők.
       
-2)Hivatkozott dokumentumok
-      - Meglévő szoftver dokumentáció.
-      - Rendszerleírás.
-      
-3)Tervezési specifikáció
-      - Adatleírás (adatstruktúra és adatfolyamok).
-      - Származtatott programstruktúra.
-      - Struktúrán belüli interfészek.
-      
-4)Modulonkénti részletes specifikáció
-      - A feldolgozás menete.
-      - Működési algoritmus (verbális leírás, pszeudokód, diagram).
-      - Interfészek (kézi és gépi inputok, eredmények, dialógusok).
-      - Alkalmazandó tervezési technikák, a kódolás módja.
-      - Adatok köre és a szervezés módja.
-      
-      //pálya, egy fajta nehézségi szint, feltételk, jóváhagyás,  hogy kerül be egy pálya, egy pályán való játék, feladatok teljesíztése, vége, hogyan halt meg, sikeres, 
-      
+2) Modulonkénti részletes specifikáció      
       
       Modulok listája az ArenoOfOrcs szoftveren belül:
-	- Level 1: pálya, normál nehézségi szint, feltétek alapján, jóváhagyással teljesíthető, pályán való játék, feladatok, 				   teljesítése feltételek, pálya vége, sikertelen teljesítés menete, sikeres teljesítés menete.
+		-Menürendszer.
+		-Level 1.
+		-Level 2.
+		-Level 3.
 		
+		Menürendszer:
+			A program elindításakor ez fogadja a felhasználót.
+			A menürendszerbe lépve különböző lehetőségeket ajánl fel nekünk. 3 fő pont első esetben.
+			Ez a 3 fő pont a:
+				-Start
+				-Options
+				-Exit
+			A Start gombra kattintva a játék elindul az első pályával.
+			Az Options gombra kattintva beállítási módokat állíthatunk be.
+				Az Options menün belül, egy almenü rendszer jelenik meg. Itt lehetőségünk van kiválasztani a játékon 					belül lévő hangok letiltására, feloldására. Innen lehetőségünk van a főmenübe való visszalépésre.
+			Az Exit gombra kattintva a játékból való kilépésről döntöttünk.
+			
+			A menürendszer egérrel vezérelhető. A pontokat egér perifériával tudjuk kiválasztani. A menürendszer különleges 			perifériát nem igényel. 
+			A játék sikeres és sikertelen elvégzése után a játék automatikusan feldobja a menürendszert, ahol a játék 				további menetéről tudunk dönteni.
 		
 		Level 1:
 			Az első pálya a játékban, a menüben a Start gomb lenyomása után a játékos automatikusan erre a pályára kerül be.
 			A pályán nehézségi szint nem választható, egy nehézségi szint alapján megy végig a pályán lévő játék a 					szoftveren belül lévő programkód alapján.
 			A pályán való játék egy "Orcs" karakterrel történik. A karaktert tudjuk irányítani a megadott kezelő gombokkal, 				különleges perifériát nem igényel, billentyűzettel vezérelhető.
 				A pályán a szigeteken és a földön játszódik a játék, gravitáció hat a játékosra és az enemykre is. 					Akadálynak víz elemek vannak berakva, ezekre lépve a játékos, enemy leesik a groundről, a játékos meghal 				 és a játék véget ér. Ezután a menürendszer jelentkezik és választhatunk az Exit vagy Retry opciók közül.
+				
 			A pályán feladatot kell teljesíteni. A feladat minden esetben az összes meglévő enemy megölése, úgy hogy a mi 				karakterünk nem hal meg.
 			Ha ez sikerül a pályát sikeresen teljesítettük.
 			A sikertelen teljesítés a pályán akkor jön elő, ha a játékosunk, karaktertünk meghal valamilyen okból.
 			Ilyen kiváltó ok lehet az, hogy az ellenség/enemy az életpontuknat egyre jobban lehúzva lenuláz minket, ez a 				játékos halálát jelenti, ha ez bekövetkezik akkor a játék sikertelennek tekinthető.
 			Másik ilyen kiváltó ok lehet, ha a karakterünkkkel/játékossal "víz" elemre lépünk. Itt a karakterünk lezuhan és 			a játék véget ér ismét.
+			
 			A pálya vége:
 				Sikeres teljesítés esetén a képernyőn egy gratulációs üzenetet kapunk a sikeres teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry, Next és Exit.
 				Retry: A pálya újra kezdése.
@@ -109,11 +111,13 @@
 			A pályán nehézségi szint nem választható, egy nehézségi szint alapján megy végig a pályán lévő játék a 					szoftveren belül lévő programkód alapján.
 			A pályán való játék egy "Orcs" karakterrel történik. A karaktert tudjuk irányítani a megadott kezelő gombokkal, 				különleges perifériát nem igényel, billentyűzettel vezérelhető.
 				A pályán a szigeteken és a földön játszódik a játék, gravitáció hat a játékosra és az enemykre is. 					Akadálynak víz elemek vannak berakva, ezekre lépve a játékos, enemy leesik a groundről, a játékos meghal 				 és a játék véget ér. Ezután a menürendszer jelentkezik és választhatunk az Exit vagy Retry opciók közül.
+				
 			A pályán feladatot kell teljesíteni. A feladat minden esetben az összes meglévő enemy megölése, úgy hogy a mi 				karakterünk nem hal meg.
 			Ha ez sikerül a pályát sikeresen teljesítettük.
 			A sikertelen teljesítés a pályán akkor jön elő, ha a játékosunk, karaktertünk meghal valamilyen okból.
 			Ilyen kiváltó ok lehet az, hogy az ellenség/enemy az életpontuknat egyre jobban lehúzva lenuláz minket, ez a 				játékos halálát jelenti, ha ez bekövetkezik akkor a játék sikertelennek tekinthető.
 			Másik ilyen kiváltó ok lehet, ha a karakterünkkkel/játékossal "víz" elemre lépünk. Itt a karakterünk lezuhan és 			a játék véget ér ismét.
+			
 			A pálya vége:
 				Sikeres teljesítés esetén a képernyőn egy gratulációs üzenetet kapunk a sikeres teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry, Next és Exit.
 				Retry: A pálya újra kezdése.
@@ -129,11 +133,13 @@
 			A pályán nehézségi szint nem választható, egy nehézségi szint alapján megy végig a pályán lévő játék a 					szoftveren belül lévő programkód alapján.
 			A pályán való játék egy "Orcs" karakterrel történik. A karaktert tudjuk irányítani a megadott kezelő gombokkal, 				különleges perifériát nem igényel, billentyűzettel vezérelhető.
 				A pályán a szigeteken és a földön játszódik a játék, gravitáció hat a játékosra és az enemykre is. 					Akadálynak víz elemek vannak berakva, ezekre lépve a játékos, enemy leesik a groundről, a játékos meghal 				 és a játék véget ér. Ezután a menürendszer jelentkezik és választhatunk az Exit vagy Retry opciók közül.
+				
 			A pályán feladatot kell teljesíteni. A feladat minden esetben az összes meglévő enemy megölése, úgy hogy a mi 				karakterünk nem hal meg.
 			Ha ez sikerül a pályát sikeresen teljesítettük.
 			A sikertelen teljesítés a pályán akkor jön elő, ha a játékosunk, karaktertünk meghal valamilyen okból.
 			Ilyen kiváltó ok lehet az, hogy az ellenség/enemy az életpontuknat egyre jobban lehúzva lenuláz minket, ez a 				játékos halálát jelenti, ha ez bekövetkezik akkor a játék sikertelennek tekinthető.
 			Másik ilyen kiváltó ok lehet, ha a karakterünkkkel/játékossal "víz" elemre lépünk. Itt a karakterünk lezuhan és 			a játék véget ér ismét.
+			
 			A pálya vége:
 				Sikeres teljesítés esetén a képernyőn egy gratulációs üzenetet kapunk a sikeres teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry, Next és Exit.
 				Retry: A pálya újra kezdése.
@@ -144,12 +150,12 @@
 				Retry: A pálya újra kezdése.
 				Exit: Kilépés a játékból.
       
-5)Fájlstruktúrák és globális adatok specifikációja
+3) Fájlstruktúrák és globális adatok specifikációja
       - Külső fájlstruktúra (logikai szerkezet, rekordleírás, elérési mód)
       - Globális adatok jegyzéke
       - Fájl/adat keresztreferenciák
       
-6)Folyamat/modul keresztreferencia táblázat
+4) Folyamat/modul keresztreferencia táblázat
 
 	Ez a táblázat mutatja az összes projektben használt változót, továbbá azt, hogy melyik POU-ban
 	  találhatók és azon belül melyik Network-ben. A Cross Reference táblázat hasznos eszköz ha
@@ -167,7 +173,7 @@
 	  állapotai, valamint megadhatók a kényszerített (Force) értékek is, miután letöltöttük a projektet a
 	  PLC-re.
 
-7)Tesztelési előírások, tesztelési dokumentáció
+5) Tesztelési előírások, tesztelési dokumentáció
       - Tesztelési utasítás, tesztadatok
 
 		A tesztelés kontrolált körülmények között zajlik, gyakorlatilag a rendszer ellenőrzött
@@ -241,13 +247,8 @@
 			
 			-A robosztusság ellenőrzésére érdemes a terhelést olyan szintre is emelni, amely (elvileg) nem fordulhat
 			 elő.
-     
-     
-     - Speciális előírások
-
-	A tesztelést a célcsoport tagjai végzik.	
-
-8)Programegységek (csomagok) létrehozásának módja
+			 
+6) Programegységek (csomagok) létrehozásának módja
       - Speciális átlapolási előírások
 	
 	A szoftverlicence Free software, tehát a nyílt forrású szoftver. (A szerző közkincsé

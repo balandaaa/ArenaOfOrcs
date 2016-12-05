@@ -1,6 +1,6 @@
 
 1) Programrendszer célja
-      - Rendszercélok
+      - Rendszercélok:
 
 	A célszoftver a megrendelő igényeinek megfelelő szoftver. A követelmények a rendszer specifikációban foglaltak, 
 	  így az irányadó követelményi feladatok e dokumentum alapján lesz figyelembe véve. A célcsoport fenntartja a jogot,

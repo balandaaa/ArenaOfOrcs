@@ -258,7 +258,21 @@
 	  verzió), időtartamát. A gyártó által vállalt jótállás és szavatosság információ is a licence
 	  szerződésben található.  
 
-      - Átalakítási feltételek
+       - Átalakítási feltételek
 
 	Átalakításra a kész szoftvernél a megrendelő részéről nincs lehetőség, a kész szoftver után lehet a következő
-	  verzióra szerződést kötni. 
+	  verzióra szerződést kötni.
+	  
+	- Speciális előírások
+
+	A tesztelést a célcsoport tagjai végzik. A játék minimum 3 különböző számítógépen hosszabb teszt folyamaton fog átesni. "A 		puding tesztje az evés" elven a játékkal játszani fogunk. Igyekezünk a pálya minden szegmensét/pixelét kipróbálni, le 			ellenőrizni. Az esetleges hibákat feljegyezzük és a átadási határidőig javítjük és ismét teszteljük a megadott részt és az egész 	 programot újra.
+	A teszt folyamat alatt a játékot különböző módokon fogjuk tesztelni lehetőségeink szerint.
+	
+	Tesztelve lesz:
+		A terhelt és nem terhelt számítógép alatt.
+		Különböző márkájú számítógépeken.
+		Különböző verziójú Unity-k alatt.
+		Különböző operációs rendszerek alatt.
+		Különböző hardverek alatt.
+		Különböző felbontások alatt.	
+

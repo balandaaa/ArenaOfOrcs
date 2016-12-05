@@ -78,6 +78,72 @@
       - Alkalmazandó tervezési technikák, a kódolás módja.
       - Adatok köre és a szervezés módja.
       
+      //pálya, egy fajta nehézségi szint, feltételk, jóváhagyás,  hogy kerül be egy pálya, egy pályán való játék, feladatok teljesíztése, vége, hogyan halt meg, sikeres, 
+      
+      
+      Modulok listája az ArenoOfOrcs szoftveren belül:
+	- Level 1: pálya, normál nehézségi szint, feltétek alapján, jóváhagyással teljesíthető, pályán való játék, feladatok, 				   teljesítése feltételek, pálya vége, sikertelen teljesítés menete, sikeres teljesítés menete.
+		
+		
+		Level 1:
+			Az első pálya a játékban, a menüben a Start gomb lenyomása után a játékos automatikusan erre a pályára kerül be.
+			A pályán nehézségi szint nem választható, egy nehézségi szint alapján megy végig a pályán lévő játék a 					szoftveren belül lévő programkód alapján.
+			A pályán való játék egy "Orcs" karakterrel történik. A karaktert tudjuk irányítani a megadott kezelő gombokkal, 				különleges perifériát nem igényel, billentyűzettel vezérelhető.
+				A pályán a szigeteken és a földön játszódik a játék, gravitáció hat a játékosra és az enemykre is. 					Akadálynak víz elemek vannak berakva, ezekre lépve a játékos, enemy leesik a groundről, a játékos meghal 				 és a játék véget ér. Ezután a menürendszer jelentkezik és választhatunk az Exit vagy Retry opciók közül.
+			A pályán feladatot kell teljesíteni. A feladat minden esetben az összes meglévő enemy megölése, úgy hogy a mi 				karakterünk nem hal meg.
+			Ha ez sikerül a pályát sikeresen teljesítettük.
+			A sikertelen teljesítés a pályán akkor jön elő, ha a játékosunk, karaktertünk meghal valamilyen okból.
+			Ilyen kiváltó ok lehet az, hogy az ellenség/enemy az életpontuknat egyre jobban lehúzva lenuláz minket, ez a 				játékos halálát jelenti, ha ez bekövetkezik akkor a játék sikertelennek tekinthető.
+			Másik ilyen kiváltó ok lehet, ha a karakterünkkkel/játékossal "víz" elemre lépünk. Itt a karakterünk lezuhan és 			a játék véget ér ismét.
+			A pálya vége:
+				Sikeres teljesítés esetén a képernyőn egy gratulációs üzenetet kapunk a sikeres teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry, Next és Exit.
+				Retry: A pálya újra kezdése.
+				Next: Következő pályára lépés.
+				Exit: Kilépés a játékból.
+				
+				Sikertelen teljesítés esetén a képernyő egy üzenetet kapunk a sikertelen teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry és Exit.
+				Retry: A pálya újra kezdése.
+				Exit: Kilépés a játékból.
+		Level 2:
+			Az első pálya sikeres teljesítése után léphetünk erre a pályára.
+			A pályán nehézségi szint nem választható, egy nehézségi szint alapján megy végig a pályán lévő játék a 					szoftveren belül lévő programkód alapján.
+			A pályán való játék egy "Orcs" karakterrel történik. A karaktert tudjuk irányítani a megadott kezelő gombokkal, 				különleges perifériát nem igényel, billentyűzettel vezérelhető.
+				A pályán a szigeteken és a földön játszódik a játék, gravitáció hat a játékosra és az enemykre is. 					Akadálynak víz elemek vannak berakva, ezekre lépve a játékos, enemy leesik a groundről, a játékos meghal 				 és a játék véget ér. Ezután a menürendszer jelentkezik és választhatunk az Exit vagy Retry opciók közül.
+			A pályán feladatot kell teljesíteni. A feladat minden esetben az összes meglévő enemy megölése, úgy hogy a mi 				karakterünk nem hal meg.
+			Ha ez sikerül a pályát sikeresen teljesítettük.
+			A sikertelen teljesítés a pályán akkor jön elő, ha a játékosunk, karaktertünk meghal valamilyen okból.
+			Ilyen kiváltó ok lehet az, hogy az ellenség/enemy az életpontuknat egyre jobban lehúzva lenuláz minket, ez a 				játékos halálát jelenti, ha ez bekövetkezik akkor a játék sikertelennek tekinthető.
+			Másik ilyen kiváltó ok lehet, ha a karakterünkkkel/játékossal "víz" elemre lépünk. Itt a karakterünk lezuhan és 			a játék véget ér ismét.
+			A pálya vége:
+				Sikeres teljesítés esetén a képernyőn egy gratulációs üzenetet kapunk a sikeres teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry, Next és Exit.
+				Retry: A pálya újra kezdése.
+				Next: Következő pályára lépés.
+				Exit: Kilépés a játékból.
+				
+				Sikertelen teljesítés esetén a képernyő egy üzenetet kapunk a sikertelen teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry és Exit.
+				Retry: A pálya újra kezdése.
+				Exit: Kilépés a játékból.
+				
+		Level 3:
+			Az első és második pálya sikeres teljesítése után léphetünk erre a pályára.
+			A pályán nehézségi szint nem választható, egy nehézségi szint alapján megy végig a pályán lévő játék a 					szoftveren belül lévő programkód alapján.
+			A pályán való játék egy "Orcs" karakterrel történik. A karaktert tudjuk irányítani a megadott kezelő gombokkal, 				különleges perifériát nem igényel, billentyűzettel vezérelhető.
+				A pályán a szigeteken és a földön játszódik a játék, gravitáció hat a játékosra és az enemykre is. 					Akadálynak víz elemek vannak berakva, ezekre lépve a játékos, enemy leesik a groundről, a játékos meghal 				 és a játék véget ér. Ezután a menürendszer jelentkezik és választhatunk az Exit vagy Retry opciók közül.
+			A pályán feladatot kell teljesíteni. A feladat minden esetben az összes meglévő enemy megölése, úgy hogy a mi 				karakterünk nem hal meg.
+			Ha ez sikerül a pályát sikeresen teljesítettük.
+			A sikertelen teljesítés a pályán akkor jön elő, ha a játékosunk, karaktertünk meghal valamilyen okból.
+			Ilyen kiváltó ok lehet az, hogy az ellenség/enemy az életpontuknat egyre jobban lehúzva lenuláz minket, ez a 				játékos halálát jelenti, ha ez bekövetkezik akkor a játék sikertelennek tekinthető.
+			Másik ilyen kiváltó ok lehet, ha a karakterünkkkel/játékossal "víz" elemre lépünk. Itt a karakterünk lezuhan és 			a játék véget ér ismét.
+			A pálya vége:
+				Sikeres teljesítés esetén a képernyőn egy gratulációs üzenetet kapunk a sikeres teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry, Next és Exit.
+				Retry: A pálya újra kezdése.
+				Next: Következő pályára lépés.
+				Exit: Kilépés a játékból.
+				
+				Sikertelen teljesítés esetén a képernyő egy üzenetet kapunk a sikertelen teljesítésről, majd az 					menürendszer felajánlja a választható opciókat. Ilyen opciók a Retry és Exit.
+				Retry: A pálya újra kezdése.
+				Exit: Kilépés a játékból.
+      
 5)Fájlstruktúrák és globális adatok specifikációja
       - Külső fájlstruktúra (logikai szerkezet, rekordleírás, elérési mód)
       - Globális adatok jegyzéke

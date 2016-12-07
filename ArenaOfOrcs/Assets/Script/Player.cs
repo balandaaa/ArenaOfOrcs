@@ -227,6 +227,7 @@ public class Player : Character
         enemyKilledText.text = "Killed enemy: " + enemyKilledCounter;
         healthText.text = "";
         scoreText.text = "";
+        Debug.Log(SceneManager.sceneCountInBuildSettings);
        if(SceneManager.sceneCountInBuildSettings > SceneManager.GetActiveScene().buildIndex+1)
         {
             NextButton.SetActive(true);

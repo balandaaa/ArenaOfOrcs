@@ -151,6 +151,11 @@ Prefab:
       objectReference: {fileID: 615409125}
     - target: {fileID: 114000014279221394, guid: c43d60be3f6d5404e87388d10cef2c3c,
         type: 2}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 777600648}
+    - target: {fileID: 114000014279221394, guid: c43d60be3f6d5404e87388d10cef2c3c,
+        type: 2}
       propertyPath: winUI
       value: 
       objectReference: {fileID: 299123913}
@@ -164,11 +169,6 @@ Prefab:
       propertyPath: enemyKilledText
       value: 
       objectReference: {fileID: 1933900004}
-    - target: {fileID: 114000014279221394, guid: c43d60be3f6d5404e87388d10cef2c3c,
-        type: 2}
-      propertyPath: NextButton
-      value: 
-      objectReference: {fileID: 777600648}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c43d60be3f6d5404e87388d10cef2c3c, type: 2}
   m_IsPrefabParent: 0

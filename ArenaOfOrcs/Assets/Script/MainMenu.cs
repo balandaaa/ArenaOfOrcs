@@ -15,9 +15,10 @@ public class MainMenu : MonoBehaviour {
 	public void ExitGame(){
 		Application.Quit ();
 	}
-    
     public void CloseOptions()
     {
         OptionsUI.SetActive(false);
     }
+
+
 }

@@ -27,6 +27,7 @@ public class Player : Character
     private GameObject PauseUI;
     [SerializeField]
     private GameObject NextButton;
+    
     private Enemy enemyController;
     private float attackRange = 3f;
     private GameObject[] enemies;
@@ -42,7 +43,8 @@ public class Player : Character
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
-
+        healthText.enabled = true;
+        scoreText.enabled = true;
 
         //GameObject gameControllerObject = GameObject.FindWithTag("Enemy");
 

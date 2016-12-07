@@ -169,6 +169,11 @@ Prefab:
       propertyPath: enemyKilledText
       value: 
       objectReference: {fileID: 1933900004}
+    - target: {fileID: 114000014279221394, guid: c43d60be3f6d5404e87388d10cef2c3c,
+        type: 2}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 370811637}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c43d60be3f6d5404e87388d10cef2c3c, type: 2}
   m_IsPrefabParent: 0
@@ -506,6 +511,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010555646472, guid: e968fa0a79599af47b082bda38fdbca8,
     type: 2}
   m_PrefabInternal: {fileID: 348344999}
+--- !u!1 &370811637 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014105562786, guid: 7177959e4f8a2bc4598e8fe4cca560bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 2021538420}
 --- !u!1 &374071156 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010084663418, guid: 8eca7c35ec3809f4c9035694a829a52c,

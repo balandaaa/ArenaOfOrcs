@@ -206,6 +206,7 @@ MonoBehaviour:
   startLevel: Level 1
   MuteUI: {fileID: 929902900}
   OptionsUI: {fileID: 153717334}
+  VolumeSlider: {fileID: 0}
 --- !u!1 &318086300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,8 +1242,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010144472920, guid: 7177959e4f8a2bc4598e8fe4cca560bd, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 224000011233836740, guid: 7177959e4f8a2bc4598e8fe4cca560bd,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011829268480, guid: 7177959e4f8a2bc4598e8fe4cca560bd,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

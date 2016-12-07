@@ -8,6 +8,13 @@ public class MainMenu : MonoBehaviour {
     private Toggle MuteUI;
     [SerializeField]
     private GameObject OptionsUI;
+    [SerializeField]
+    private Slider VolumeSlider;
+    void Uptade()
+    {
+        Debug.Log(VolumeSlider.value);
+        AudioListener.volume = VolumeSlider.value;
+    }
     // Use this for initialization
     public void NewGame(){
 		Application.LoadLevel (startLevel); 

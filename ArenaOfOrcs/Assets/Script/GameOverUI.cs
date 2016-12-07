@@ -20,4 +20,8 @@ public class GameOverUI : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void Mute()
+    {
+        AudioListener.volume = 0;
+    }
 }

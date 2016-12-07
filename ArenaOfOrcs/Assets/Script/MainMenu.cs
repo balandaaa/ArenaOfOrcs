@@ -1,20 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 	public string startLevel;
     [SerializeField]
-    private Toggle MuteUI;
-    [SerializeField]
     private GameObject OptionsUI;
-    [SerializeField]
-    private Slider VolumeSlider;
-    void Uptade()
-    {
-        Debug.Log(VolumeSlider.value);
-        AudioListener.volume = VolumeSlider.value;
-    }
     // Use this for initialization
     public void NewGame(){
 		Application.LoadLevel (startLevel); 
@@ -25,14 +15,7 @@ public class MainMenu : MonoBehaviour {
 	public void ExitGame(){
 		Application.Quit ();
 	}
-    public void Mute()
-    {
-
-        if (MuteUI.isOn)
-            AudioListener.volume = 0;
-        else
-            AudioListener.volume = 1f;
-    }
+    
     public void CloseOptions()
     {
         OptionsUI.SetActive(false);

@@ -218,6 +218,8 @@ public class Player : Character
     void EndGame()
     {
         GameOverUI.SetActive(true);
+        rb.gravityScale = 0;
+        rb.isKinematic = true;
         healthText.text = "";
         scoreText.text = "";
 

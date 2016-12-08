@@ -54,6 +54,7 @@ GameObject:
   - 114: {fileID: 114000012041517740}
   - 225: {fileID: 225000011567932184}
   - 82: {fileID: 82000010286670802}
+  - 95: {fileID: 95000013104775734}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -371,7 +372,7 @@ GameObject:
   - 222: {fileID: 222000011559762222}
   - 114: {fileID: 114000012422501572}
   - 114: {fileID: 114000011882431256}
-  - 114: {fileID: 114000014072339486}
+  - 114: {fileID: 114000013270646554}
   m_Layer: 5
   m_Name: CloseOptions
   m_TagString: Untagged
@@ -409,7 +410,7 @@ GameObject:
   - 114: {fileID: 114000012394361562}
   - 114: {fileID: 114000011535259210}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -654,7 +655,6 @@ GameObject:
   - 224: {fileID: 224000014168183060}
   - 114: {fileID: 114000013835500484}
   - 225: {fileID: 225000012898178784}
-  - 95: {fileID: 95000012799342300}
   m_Layer: 5
   m_Name: Win
   m_TagString: Untagged
@@ -804,16 +804,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95000012799342300
+--- !u!95 &95000013104775734
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014093306744}
+  m_GameObject: {fileID: 1000010144472920}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84866d0e63073d94d8befc2d1552fb71, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7160c5c4db4975c4dafeaf1702f0a84e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000014072339486}
+      - m_Target: {fileID: 114000013270646554}
         m_MethodName: CloseOptions
         m_Mode: 1
         m_Arguments:
@@ -1754,7 +1754,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114000012235070082}
-        m_MethodName: Exit
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1913,7 +1913,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: 'Main Menu
+
+'
 --- !u!114 &114000012922257100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2017,6 +2019,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0.44117647, g: 0.44117647, b: 0.44117647, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &114000013270646554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012437188376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9089e56c2fc77419a962ace416becdd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLevel: Level 1
+  OptionsUI: {fileID: 1000010144472920}
 --- !u!114 &114000013342603228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2250,19 +2265,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 0
   m_Text: 'Max Score: '
---- !u!114 &114000014072339486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012437188376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089e56c2fc77419a962ace416becdd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startLevel: 
-  OptionsUI: {fileID: 1000010144472920}
 --- !u!114 &114000014145709638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3204,7 +3206,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -70, y: 0}
   m_SizeDelta: {x: -260, y: -132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013349957580

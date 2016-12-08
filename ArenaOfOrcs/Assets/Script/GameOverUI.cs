@@ -6,9 +6,9 @@ public class GameOverUI : MonoBehaviour
 {
 
     // Use this for initialization
-    public void Exit()
+    public void MainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("menu");
     }
 
     // Update is called once per frame
